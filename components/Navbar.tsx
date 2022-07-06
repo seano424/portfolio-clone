@@ -50,7 +50,7 @@ export default function Navbar(props: Props) {
       <ul>
         <li className="hidden lg:flex uppercase font-bold text-2xl hover:text-primary transition-all duration-700 ease-linear">
           <Link href="/">
-            <div className="relative h-12 w-12 cursor-pointer">
+            <a className="relative h-12 w-12 cursor-pointer">
               <Image
                 className="object-cover rounded-full"
                 src="/images/mebw.jpeg"
@@ -59,7 +59,7 @@ export default function Navbar(props: Props) {
                 priority
                 sizes="50vw"
               />
-            </div>
+            </a>
           </Link>
         </li>
         <li className="lg:hidden">

@@ -2,10 +2,9 @@ import { Client } from '@notionhq/client'
 import slugify from 'slugify'
 
 export default function Blog(props) {
-  const { blog, title, body } = props
+  const { blog, body } = props
   return (
     <>
-      <pre>{JSON.stringify(title, null, 2)}</pre>
       <pre>{JSON.stringify(body, null, 2)}</pre>
     </>
   )
@@ -60,7 +59,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
     block_id: page.id,
   })
 
-  const title = page.child_page.title
   const body = []
 
   blocks.results.forEach((block: any) => {
@@ -72,7 +70,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   return {
     props: {
       blog: blocks,
-      title: title,
       body,
     },
   }
