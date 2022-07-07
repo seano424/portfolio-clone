@@ -11,7 +11,7 @@ export default function Card() {
         className="object-cover rounded-lg"
       />
       {/* Inlay with Content */}
-      <div className="absolute inset-0 bg-blue-50/90 flex flex-col justify-center items-center gap-5 opacity-100 group-hover:opacity-100 transition-all duration-300 ease-in-out rounded-lg">
+      <div className="absolute inset-0 bg-blue-50/90 flex flex-col justify-center items-center gap-5 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out rounded-lg">
         <h3 className="h3 font-black">Project Name</h3>
         <div className="flex items-center space-x-4">
           <a
