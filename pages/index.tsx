@@ -116,9 +116,9 @@ const Home = (props) => {
                 </Link>
               </div>
               <div className='mt-20 grid gap-5'>
-                <h4 className="h4">
+                <p className="h4">
                   I love building things and working on projects.
-                </h4>
+                </p>
                 <p>Check out some of my more recent projects below.</p>
               </div>
             </div>
