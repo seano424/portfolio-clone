@@ -100,6 +100,7 @@ const Home = (props) => {
                     src="/images/mebw.jpeg"
                     alt="Hero Image"
                     layout='fill'
+                    sizes="20vw"
                     priority
                   />
                 </div>

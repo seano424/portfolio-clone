@@ -5,15 +5,13 @@ export default function Card() {
   return (
     <div className="h-[400px] lg:h-[300px] w-full shadow-lg bg-red-50 relative rounded-lg group cursor-pointer">
       <Image
-        height={650}
-        width={400}
         src="/images/feedback-board.png"
         alt="Project Image"
         layout="fill"
         className="object-cover rounded-lg"
       />
       {/* Inlay with Content */}
-      <div className="absolute inset-0 bg-blue-50/90 flex flex-col justify-center items-center gap-5 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out rounded-lg">
+      <div className="absolute inset-0 bg-blue-50/90 flex flex-col justify-center items-center gap-5 opacity-100 group-hover:opacity-100 transition-all duration-300 ease-in-out rounded-lg">
         <h3 className="h3 font-black">Project Name</h3>
         <div className="flex items-center space-x-4">
           <a
@@ -41,19 +39,15 @@ export default function Card() {
           <EyeIcon className="w-8" />
         </div>
         <div className="flex gap-5">
-          <Image
-            src="/svgs/nextjs.svg"
-            alt="Next JS Icon"
-            height={30}
-            width={30}
-          />
-          <Image
-            src="/svgs/tailwind.svg"
-            alt="Next JS Icon"
-            height={30}
-            width={30}
-          />
-          <Image src="/svgs/ts.svg" alt="Next JS Icon" height={30} width={30} />
+          <div className="relative h-10 w-10">
+            <Image src="/svgs/nextjs.svg" alt="Next JS Icon" layout="fill" />
+          </div>
+          <div className="relative h-10 w-10">
+            <Image src="/svgs/tailwind.svg" alt="Next JS Icon" layout="fill" />
+          </div>
+          <div className="relative h-10 w-10">
+            <Image src="/svgs/ts.svg" alt="Next JS Icon" layout="fill" />
+          </div>
         </div>
       </div>
     </div>
