@@ -24,7 +24,7 @@
     @apply text-2xl sm:text-3xl;
   }
 
-  .h3 {
+  .h3, .h4 {
     @apply text-xl sm:text-2xl xl:text-4xl;
   }
 
