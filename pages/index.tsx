@@ -12,17 +12,13 @@ const Home = (props) => {
   return (
     <Layout>
       <AnimatePresence initial={false}>
-        <section>
+        <div>
           {/* About Me */}
-          <m.section
-            viewport={{ margin: '-450px' }}
-            id="about"
-            className="py-base"
-          >
+          <m.section id="about" className="py-base">
             <div className="flex flex-col gap-10 lg:gap-8 lg:mt-10">
               <div className="flex justify-between items-center flex-col-reverse lg:flex-row gap-10 lg:gap-0">
-                <div className="flex flex-col gap-10">
-                  <h1 className="h1 font-black text-center lg:text-left flex-1 lg:max-w-md xl:max-w-3xl">
+                <div className="flex flex-col gap-10 flex-1">
+                  <h1 className="h1 font-black text-center lg:text-left flex-1">
                     Hi! 👋 I'm Sean. I'm a front-end developer, designer, and
                     blogger.
                   </h1>
@@ -98,20 +94,19 @@ const Home = (props) => {
                     </a>
                   </div>
                 </div>
-                <Image
-                  className="object-cover rounded-full h-64 w-64"
-                  src="/images/mebw.jpeg"
-                  alt="Hero Image"
-                  height={250}
-                  width={250}
-                  priority
-                />
+                <div className='relative h-64 w-64'>
+                  <Image
+                    className="object-cover rounded-full"
+                    src="/images/mebw.jpeg"
+                    alt="Hero Image"
+                    layout='fill'
+                    priority
+                  />
+                </div>
               </div>
               <div className="flex gap-10 justify-center lg:justify-start">
                 <Link href="/">
-                  <a className="button">
-                    See my work
-                  </a>
+                  <a className="button">See my work</a>
                 </Link>
                 <Link href="/">
                   <a className="button bg-white dark:bg-light text-dark">
@@ -119,10 +114,12 @@ const Home = (props) => {
                   </a>
                 </Link>
               </div>
-              <h3 className="h3 mt-20">
-                I love building things and working on projects.
-              </h3>
-              <p>Check out some of my more recent projects below.</p>
+              <div className='mt-20 grid gap-5'>
+                <h3 className="h3">
+                  I love building things and working on projects.
+                </h3>
+                <p>Check out some of my more recent projects below.</p>
+              </div>
             </div>
           </m.section>
           {/* Projects / Portfolio */}
@@ -169,7 +166,7 @@ const Home = (props) => {
               ></path>
             </svg>
           </button>
-        </section>
+        </div>
       </AnimatePresence>
     </Layout>
   )
