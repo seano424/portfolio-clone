@@ -53,11 +53,11 @@ export default function Navbar(props: Props) {
             <a className="relative h-12 w-12 cursor-pointer">
               <Image
                 className="object-cover rounded-full"
-                src="/images/mebw.jpeg"
-                alt="Hero Image"
+                src="/images/mebw.webp"
+                alt="Image of Sean"
                 layout="fill"
+                sizes="20vw"
                 priority
-                sizes="50vw"
               />
             </a>
           </Link>

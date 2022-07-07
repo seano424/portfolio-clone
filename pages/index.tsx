@@ -97,7 +97,7 @@ const Home = (props) => {
                 <div className='relative h-64 w-64'>
                   <Image
                     className="object-cover rounded-full"
-                    src="/images/mebw.jpeg"
+                    src="/images/mebw.webp"
                     alt="Hero Image"
                     layout='fill'
                     sizes="20vw"
