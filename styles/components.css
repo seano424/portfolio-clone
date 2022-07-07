@@ -33,6 +33,10 @@
     font-family: 'Lucida Grande';
   }
 
+  .button {
+    @apply px-8 py-4 font-bold text-lg uppercase rounded-full bg-dark dark:bg-secondary  text-light shadow-lg;
+  }
+
   .page-padding {
     @apply pt-56 pb-8;
   }

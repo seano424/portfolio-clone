@@ -5,6 +5,8 @@ export default function Card() {
   return (
     <div className="h-[400px] lg:h-[300px] w-full shadow-lg bg-red-50 relative rounded-lg group cursor-pointer">
       <Image
+        height={650}
+        width={400}
         src="/images/feedback-board.png"
         alt="Project Image"
         layout="fill"

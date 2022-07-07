@@ -109,26 +109,16 @@ const Home = (props) => {
               </div>
               <div className="flex gap-10 justify-center lg:justify-start">
                 <Link href="/">
-                  <a className="px-8 py-4 font-bold text-lg uppercase rounded-full bg-dark text-light shadow-lg">
+                  <a className="button">
                     See my work
                   </a>
                 </Link>
                 <Link href="/">
-                  <a className="px-8 py-4 font-bold text-lg uppercase rounded-full bg-white text-dark shadow-lg">
+                  <a className="button bg-white dark:bg-light text-dark">
                     More About Me
                   </a>
                 </Link>
               </div>
-
-              {/* <p className="leading-[1.8] p">
-                    I am a Frontend Developer based in Kansas City and
-                    specialize in bringing forth beautiful UI, and I love what I
-                    do! I commonly make websites and apps with TailwindCSS /
-                    SASS, Craft CMS, NextJS / React, TypeScript, and JAMstack
-                    architecture. I am mostly experienced with JavaScript and JS
-                    frameworks, but I have also worked in Ruby on Rails. If you
-                    have any projects in mind feel free to reach out!
-                  </p> */}
               <h3 className="h3 mt-20">
                 I love building things and working on projects.
               </h3>
