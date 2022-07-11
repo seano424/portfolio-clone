@@ -24,7 +24,8 @@
     @apply text-2xl sm:text-3xl;
   }
 
-  .h3, .h4 {
+  .h3,
+  .h4 {
     @apply text-xl sm:text-2xl xl:text-4xl;
   }
 
@@ -39,5 +40,11 @@
 
   .page-padding {
     @apply pt-56 pb-8;
+  }
+
+  .hover-underline-animation {
+    @apply inline-block relative;
+    @apply after:content-[''] after:absolute after:w-full after:transform after:scale-x-0 after:h-[3px] after:rounded-lg after:-bottom-2 after:left-0 after:origin-bottom-left after:transition-transform after:duration-300 after:ease-out after:bg-primary;
+    @apply hover:after:transform hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }

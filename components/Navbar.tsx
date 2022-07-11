@@ -78,7 +78,7 @@ export default function Navbar(props: Props) {
         {navLinks.map((link) => (
           <li key={link.title}>
             <Link href={link.url}>
-              <a className="">{link.title}</a>
+              <a className="hover-underline-animation">{link.title}</a>
             </Link>
           </li>
         ))}
