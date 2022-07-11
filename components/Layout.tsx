@@ -14,10 +14,14 @@ interface Props {
 export default function Layout(props: Props) {
   const { children, title = "Sean OReilly's Portfolio" } = props
   const { theme, systemTheme, setTheme } = useTheme()
+  const navTheme = useTheme()
   const [state, setState] = useState({
     isMobileNavOpen: false,
     mounted: false,
   })
+
+  console.log(navTheme);
+  
 
   useEffect(() => {
     console.log(
@@ -33,14 +37,6 @@ export default function Layout(props: Props) {
       '🤗'
     )
   }, [])
-
-  useEffect(() => {
-    setState((prevState) => ({
-      ...prevState,
-      mounted: true,
-    }))
-    setTheme(theme === systemTheme ? theme : systemTheme)
-  }, [state.mounted])
   
 
   return (
