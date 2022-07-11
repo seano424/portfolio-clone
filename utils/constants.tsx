@@ -1,15 +1,19 @@
 const navLinks = [
   {
+    title: 'Home',
+    url: '/',
+  },
+  {
     title: 'About',
-    url: '/about',
+    url: '#about',
   },
   {
     title: 'Projects',
-    url: '/projects',
+    url: '#projects',
   },
   {
     title: 'Contact',
-    url: '/contact',
+    url: '#contact',
   },
 ]
 
@@ -20,19 +24,19 @@ const mobileNavLinks = [
   },
   {
     title: 'Projects',
-    url: '/projects',
+    url: '#projects',
   },
   {
     title: 'About',
-    url: '/about',
+    url: '#about',
   },
   {
     title: 'Contact',
-    url: '/contact',
+    url: '#contact',
   },
   {
     title: 'Resume',
-    url: '/resume',
+    url: '#resume',
   },
 ]
 

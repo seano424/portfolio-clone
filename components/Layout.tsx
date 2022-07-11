@@ -1,10 +1,8 @@
 import { ReactNode, useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Menu from './Menu'
-
 interface Props {
   children: ReactNode
   title?: string
@@ -13,15 +11,10 @@ interface Props {
 
 export default function Layout(props: Props) {
   const { children, title = "Sean OReilly's Portfolio" } = props
-  const { theme, systemTheme, setTheme } = useTheme()
-  const navTheme = useTheme()
   const [state, setState] = useState({
     isMobileNavOpen: false,
     mounted: false,
   })
-
-  console.log(navTheme);
-  
 
   useEffect(() => {
     console.log(
@@ -37,7 +30,6 @@ export default function Layout(props: Props) {
       '🤗'
     )
   }, [])
-  
 
   return (
     <div className="flex flex-col font-open min-h-screen bg-light dark:bg-dark dark:text-blue-50">

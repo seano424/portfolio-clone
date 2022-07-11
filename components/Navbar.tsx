@@ -6,6 +6,7 @@ import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
 import { navLinks } from '../utils/constants'
+import { useRouter } from 'next/router'
 
 interface Props {
   logo?: string
@@ -23,6 +24,8 @@ export default function Navbar(props: Props) {
     icon: null,
   })
   const { theme, setTheme } = useTheme()
+  const { pathname } = useRouter()
+  console.log(pathname)
 
   useEffect(() => {
     setNavState(() => ({
@@ -74,11 +77,16 @@ export default function Navbar(props: Props) {
           />
         </li>
       </ul>
-      <ul className="gap-12 xl:gap-20 hidden lg:flex text-xl text-gray-500 dark:text-light">
+      <ul className="gap-12 xl:gap-20 hidden lg:flex items-center justify-center text-xl text-gray-500 dark:text-light">
         {navLinks.map((link) => (
           <li key={link.title}>
             <Link href={link.url}>
-              <a className="hover-underline-animation">{link.title}</a>
+              <a
+                className={`hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-3xl px-5 py-3 dark:hover-underline-animation
+                `}
+              >
+                {link.title}
+              </a>
             </Link>
           </li>
         ))}
