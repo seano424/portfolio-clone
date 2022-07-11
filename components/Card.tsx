@@ -43,7 +43,7 @@ export default function Card() {
             <Image src="/svgs/nextjs.svg" alt="Next JS Icon" layout="fill" />
           </div>
           <div className="relative h-10 w-10">
-            <Image src="/svgs/tailwind.svg" alt="Next JS Icon" layout="fill" />
+            <Image src="/svgs/tw.svg" alt="Next JS Icon" layout="fill" />
           </div>
           <div className="relative h-10 w-10">
             <Image src="/svgs/ts.svg" alt="Next JS Icon" layout="fill" />

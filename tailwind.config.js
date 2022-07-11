@@ -15,6 +15,7 @@ module.exports = {
         light: '#F9FAFB',
         dark: '#030507',
         'neutral-superlight': '#F7F7F7',
+        'dark-secondary': '#0e1217',
       },
       container: {
         center: true,

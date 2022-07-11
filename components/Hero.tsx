@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="py-base flex flex-col gap-10 lg:gap-8 lg:mt-10"
+      className="px-base flex flex-col gap-10 lg:gap-8 pt-32 lg:pt-48 lg:pb-10"
     >
       <div className="flex justify-between items-center flex-col-reverse lg:flex-row gap-10 lg:gap-0">
         <div className="flex flex-col gap-10 flex-1">

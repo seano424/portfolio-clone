@@ -40,7 +40,7 @@ export default function Layout(props: Props) {
       </Head>
       <Navbar state={state} setState={setState} title={title} />
       <Menu state={state} />
-      <main className="relative top-24 sm:top-20 px-base">
+      <main className="relative">
         <div className="flex-1 w-full h-full">{children}</div>
         <Footer />
       </main>

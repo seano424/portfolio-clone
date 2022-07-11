@@ -1,20 +1,19 @@
-import Card from "./Card"
+import Card from './Card'
+import Image from 'next/image'
+import {} from '@heroicons/react/solid'
+import AltCard from './AltCard'
+import { projects } from 'utils/projects'
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-base w-full border-8 border-red-50 px-10 cno"
+      className="py-base w-full px-base"
     >
-      <h2 className="h2 text-center font-black italic mb-10 drop-shadow-lg">
-        Projects
-      </h2>
-      <div className="gap-10 grid xl:grid-cols-2">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+      <h2 className="h2 mb-20 font-black drop-shadow-2xl">Selected Projects</h2>
+      {projects.map((project, i) => (
+        <AltCard index={i} key={project.title} {...project} />
+      ))}
     </section>
   )
 }

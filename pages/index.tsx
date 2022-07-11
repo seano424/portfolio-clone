@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout'
-import AboutMe from '@/components/AboutMe'
+import Hero from '@/components/Hero'
 import ButtonScrollTompnTop from '@/components/ButtonScrollToTop'
 import Projects from '@/components/Projects'
 
@@ -9,8 +9,8 @@ const Home = (props) => {
 
   return (
     <Layout>
-      <AboutMe />
-      {/* <Projects /> */}
+      <Hero />
+      <Projects />
       {/* <ButtonScrollToTop /> */}
       <div className='h-[900px]'></div>
     </Layout>
