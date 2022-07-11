@@ -1,3 +1,5 @@
+import SocialLinks from './SocialLinks'
+
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
   main: [
@@ -78,16 +80,7 @@ export default function Example() {
           ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
-          {navigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-dark dark:text-light hover:text-gray-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))}
+          <SocialLinks />
         </div>
         <p className="mt-8 text-center text-base text-dark dark:text-light">
           &copy; 2022 Sean O'Reilly. Front-end Developer. 🐋

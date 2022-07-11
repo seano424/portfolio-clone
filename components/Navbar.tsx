@@ -15,13 +15,28 @@ interface Props {
   setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
 }
 
+const navLinks = [
+  {
+    title: 'About',
+    url: '/about',
+  },
+  {
+    title: 'Projects',
+    url: '/projects',
+  },
+  {
+    title: 'Contact',
+    url: '/contact',
+  },
+]
+
 export default function Navbar(props: Props) {
   const { state, setState } = props
-  const { theme, setTheme } = useTheme()
   const [navState, setNavState] = useState({
     color: 'white',
     icon: null,
   })
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     setNavState(() => ({
@@ -73,32 +88,14 @@ export default function Navbar(props: Props) {
           />
         </li>
       </ul>
-      <ul className="gap-12 xl:gap-20 text-lg hidden lg:flex">
-        <li>
-          <Link href="/">
-            <a className="">Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="">About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="">Blog</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="">Projects</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="">Contact</a>
-          </Link>
-        </li>
+      <ul className="gap-12 xl:gap-20 hidden lg:flex text-xl text-gray-500 dark:text-light">
+        {navLinks.map((link) => (
+          <li key={link.title}>
+            <Link href={link.url}>
+              <a className="">{link.title}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
       <ul className="flex items-center gap-8 uppercase font-bold text-2xl">
         <li className="flex w-10 h-10 justify-center items-center">

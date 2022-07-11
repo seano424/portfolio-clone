@@ -16,6 +16,10 @@ module.exports = {
         dark: '#030507',
         'neutral-superlight': '#F7F7F7',
       },
+      container: {
+        center: true,
+        padding: '1.5rem',
+      },
     },
     debugScreens: {
       position: ['bottom', 'right'],
