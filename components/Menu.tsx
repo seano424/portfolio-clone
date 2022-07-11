@@ -1,12 +1,5 @@
 import { AnimatePresence, m } from 'framer-motion'
-
-const modalLinks = [
-  { title: 'Home', href: '/' },
-  { title: 'Projects', href: '/' },
-  { title: 'Blog', href: '/' },
-  { title: 'Contact', href: '/' },
-  { title: 'Resume', href: '/' },
-]
+import { mobileNavLinks } from 'utils/constants'
 
 interface Props {
   state: {
@@ -28,7 +21,7 @@ export default function Menu(props: Props) {
           className="lg:hidden fixed top-20 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm min-h-screen z-10 w-3/4 md:w-1/2 flex justify-center py-base items-start"
         >
           <ul className="px-base pt-20 sm:py-base text-4xl sm:text-6xl font-black uppercase grid gap-8 sm:gap-16 tracking-tighter text-fuchsia-400">
-            {modalLinks.map((link, i) => (
+            {mobileNavLinks.map((link, i) => (
               <li key={i}>
                 <a
                   className={`hover:text-dark dark:hover:text-light transition-all ease-linear drop-shadow-2xl 
@@ -37,7 +30,7 @@ export default function Menu(props: Props) {
                     ${i === 2 && 'duration-500'}
                     ${i === 3 && 'duration-700'}
                   `}
-                  href={link.href}
+                  href={link.url}
                 >
                   {link.title}
                 </a>

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
+import { navLinks } from '../utils/constants'
 
 interface Props {
   logo?: string
@@ -14,21 +15,6 @@ interface Props {
   }
   setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
 }
-
-const navLinks = [
-  {
-    title: 'About',
-    url: '/about',
-  },
-  {
-    title: 'Projects',
-    url: '/projects',
-  },
-  {
-    title: 'Contact',
-    url: '/contact',
-  },
-]
 
 export default function Navbar(props: Props) {
   const { state, setState } = props
