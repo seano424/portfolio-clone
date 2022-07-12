@@ -24,31 +24,31 @@ export default function AltCard(props: Props) {
   const odd = index % 2 !== 0
 
   return (
-    <div
+    <article
       className={`flex relative justify-end mb-20 lg:mb-36 shadow-lg rounded-lg ${
         odd && 'flex-row-reverse'
       }`}
     >
+      {/* Project Image */}
       <div
-        className={`w-full lg:w-7/12 absolute h-full ${
-          odd ? 'right-0' : 'left-0'
-        }`}
+        className={`w-full lg:w-7/12 absolute h-full 
+          ${odd ? 'right-0' : 'left-0'}
+        `}
       >
-        <div
-          className={`relative h-full w-full cursor-pointer ${
-            odd ? 'rounded-l-lg' : 'rounded-r-lg'
-          }`}
-        >
+        <div className={`relative h-full w-full cursor-pointer`}>
           <Image
             src={image}
             alt="Project Image"
             layout="fill"
-            className="object-cover z-10"
+            className={`"object-cover z-10 rounded-lg ${
+              odd ? 'lg:rounded-l-none' : 'lg:rounded-r-none'
+            }`}
           />
         </div>
       </div>
+      {/* Project Content */}
       <div
-        className={`w-full lg:w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary/95 dark:text-light rounded-lg bg-white/90 ${
+        className={`w-full lg:w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary/95 dark:text-light rounded-lg z-10 lg:z-auto bg-white/90 ${
           odd ? 'lg:items-start' : 'lg:items-end'
         }`}
       >
@@ -128,6 +128,6 @@ export default function AltCard(props: Props) {
           </ul>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
