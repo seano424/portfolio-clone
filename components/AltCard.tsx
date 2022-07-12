@@ -25,11 +25,15 @@ export default function AltCard(props: Props) {
 
   return (
     <div
-      className={`flex relative justify-end mb-36 shadow-lg rounded-lg ${
+      className={`flex relative justify-end mb-20 lg:mb-36 shadow-lg rounded-lg ${
         odd && 'flex-row-reverse'
       }`}
     >
-      <div className={`w-7/12 absolute h-full ${odd ? 'right-0' : 'left-0'}`}>
+      <div
+        className={`w-full lg:w-7/12 absolute h-full ${
+          odd ? 'right-0' : 'left-0'
+        }`}
+      >
         <div
           className={`relative h-full w-full cursor-pointer ${
             odd ? 'rounded-l-lg' : 'rounded-r-lg'
@@ -39,30 +43,34 @@ export default function AltCard(props: Props) {
             src={image}
             alt="Project Image"
             layout="fill"
-            className={`object-cover z-10`}
+            className="object-cover z-10"
           />
         </div>
       </div>
       <div
-        className={`w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary dark:text-light rounded-lg ${
-          odd ? 'items-start' : 'items-end'
+        className={`w-full lg:w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary/95 dark:text-light rounded-lg z-20 bg-white/90 ${
+          odd ? 'lg:items-start' : 'lg:items-end'
         }`}
       >
-        <div className={`flex flex-col ${odd ? 'items-start' : 'items-end'}`}>
-          <p className="font-mono">Featured Project</p>
-          <h4 className="h4">{title}</h4>
+        <div
+          className={`flex flex-col ${odd ? 'lg:items-start' : 'lg:items-end'}`}
+        >
+          <p className="font-mono drop-shadow-2xl">Featured Project</p>
+          <h4 className="h4 drop-shadow-2xl">{title}</h4>
         </div>
         <p
-          className={`p-5 max-w-md shadow-2xl bg-light dark:bg-dark-secondary dark:text-light rounded-lg z-20 ${
-            odd ? '-ml-5 text-left' : '-mr-5 text-right'
+          className={`lg:p-5 drop-shadow-2xl max-w-md lg:shadow-2xl lg:bg-light dark:bg-dark-secondary dark:text-light rounded-lg z-20 ${
+            odd ? 'lg:-ml-5 lg:text-left' : 'lg:-mr-5 lg:text-right'
           }`}
         >
           {description}
         </p>
         <div
-          className={`flex flex-col ${odd ? 'items-start' : 'items-end'} gap-4`}
+          className={`flex flex-col ${
+            odd ? 'lg:items-start' : 'lg:items-end'
+          } gap-4`}
         >
-          <ul className="flex gap-8">
+          <ul className="flex gap-2 lg:gap-8 flex-wrap">
             {tech.map((tech) => (
               <li key={tech}>{tech}</li>
             ))}
@@ -103,16 +111,16 @@ export default function AltCard(props: Props) {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                 />
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                 />
               </svg>

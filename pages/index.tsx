@@ -12,7 +12,7 @@ const Home = (props) => {
       <Hero />
       <Projects />
       {/* <ButtonScrollToTop /> */}
-      <div className='h-[900px]'></div>
+      {/* <div className='h-[900px]'></div> */}
     </Layout>
   )
 }
