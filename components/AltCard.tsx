@@ -48,7 +48,7 @@ export default function AltCard(props: Props) {
         </div>
       </div>
       <div
-        className={`w-full lg:w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary/95 dark:text-light rounded-lg z-20 bg-white/90 ${
+        className={`w-full lg:w-7/12 h-full relative flex flex-col gap-8 px-10 py-20 dark:bg-dark-secondary/95 dark:text-light rounded-lg bg-white/90 ${
           odd ? 'lg:items-start' : 'lg:items-end'
         }`}
       >
