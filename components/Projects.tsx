@@ -2,7 +2,7 @@ import { projects } from 'utils/projects'
 import ProjectCard from './ProjectCard'
 
 interface Props {
-  heading: string
+  heading?: string
 }
 
 export default function Projects(props: Props) {
