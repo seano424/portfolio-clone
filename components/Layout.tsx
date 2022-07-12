@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Menu from './Menu'
+import Cursor from './Cursor'
 interface Props {
   children: ReactNode
   title?: string
@@ -40,6 +41,7 @@ export default function Layout(props: Props) {
       </Head>
       <Navbar state={state} setState={setState} title={title} />
       <Menu state={state} />
+      <Cursor />
       <main className="relative">
         <div className="flex-1 w-full h-full">{children}</div>
         <Footer />

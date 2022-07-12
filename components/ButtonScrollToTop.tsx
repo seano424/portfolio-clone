@@ -1,10 +1,8 @@
-import React from 'react'
-
 export default function ButtonScrollToTop() {
   return (
     <button
       aria-label="Go to Top Button"
-      className="p-4 mt-10 rounded-full cursor-pointer font-black dark:bg-gray-50 dark:text-gray-900 transition-all duration-200 ease-linear hover:text-2xl  hover:text-primary animate-pulse w-max mx-auto"
+      className="p-4 rounded-full cursor-pointer font-black dark:bg-gray-50 dark:text-gray-900 transition-all duration-200 ease-linear hover:text-2xl  hover:text-primary animate-pulse w-max mx-auto"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -3,6 +3,11 @@
     @apply bg-light text-dark dark:bg-dark dark:text-light;
     @apply min-h-screen;
   }
+  /* html,
+  body {
+    cursor: none;
+  } */
+
   /* open-sans-regular - latin */
   @font-face {
     font-family: 'Open Sans';

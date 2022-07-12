@@ -6,7 +6,6 @@ import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
 import { navLinks } from '../utils/constants'
-import { useRouter } from 'next/router'
 
 interface Props {
   logo?: string
@@ -24,8 +23,6 @@ export default function Navbar(props: Props) {
     icon: null,
   })
   const { theme, setTheme } = useTheme()
-  const { pathname } = useRouter()
-  console.log(pathname)
 
   useEffect(() => {
     setNavState(() => ({
@@ -66,7 +63,7 @@ export default function Navbar(props: Props) {
             </a>
           </Link>
         </li>
-        <li className="lg:hidden">
+        <li id="hamburger" className="lg:hidden">
           <Hamburger
             label="Show Menu"
             rounded
@@ -82,7 +79,7 @@ export default function Navbar(props: Props) {
           <li key={link.title}>
             <Link href={link.url}>
               <a
-                className={`hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-3xl px-5 py-3 dark:hover-underline-animation
+                className={`hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-3xl px-5 py-3
                 `}
               >
                 {link.title}
@@ -91,7 +88,10 @@ export default function Navbar(props: Props) {
           </li>
         ))}
       </ul>
-      <ul className="flex items-center gap-8 uppercase font-bold text-2xl">
+      <ul
+        id="themeButton"
+        className="flex items-center gap-8 uppercase font-bold text-2xl"
+      >
         <li className="flex w-10 h-10 justify-center items-center">
           <button
             aria-label="Button to change color theme"

@@ -13,6 +13,13 @@ const About: NextPage = () => {
           JavaScript and JS frameworks, but I have also worked in Ruby on Rails.
           If you have any projects in mind feel free to reach out!
         </p>
+        {/* <p className="font-black tracking-wide leading-loose">
+          I am a Front-end Developer originally from Kansas City. I specialize
+          in bringing forth beautiful UI, and I love what I do! I commonly make
+          websites that are focused on being user friendly, written with clean
+          and readable code, and are simple to use. If you have any projects in
+          mind feel free to reach out!
+        </p> */}
       </div>
     </Layout>
   )
