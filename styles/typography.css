@@ -1,0 +1,63 @@
+/* Heading Helpers */
+.h1 { @apply font-black text-4xl lg:text-7xl; }
+.h2 { @apply font-black text-2xl lg:text-6xl; }
+.h3 { @apply text-xl lg:text-3xl; }
+.h4 { @apply font-bold text-lg lg:text-4xl; }
+.h5 { @apply font-black; }
+.h6 { @apply font-black; }
+.p { @apply  sm:text-lg; font-family: 'Lucida Grande';}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/open-sans-v29-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-regular.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/open-sans-v29-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-700.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/open-sans-v29-latin-800.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-800.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-800.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-800.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-800.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
