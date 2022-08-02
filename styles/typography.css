@@ -1,11 +1,30 @@
 /* Heading Helpers */
-.h1 { @apply font-black text-4xl lg:text-7xl; }
-.h2 { @apply font-black text-2xl lg:text-6xl; }
-.h3 { @apply text-xl lg:text-3xl; }
-.h4 { @apply font-bold text-lg lg:text-4xl; }
-.h5 { @apply font-black; }
-.h6 { @apply font-black; }
-.p { @apply  sm:text-lg; font-family: 'Lucida Grande';}
+.h1 {
+  @apply font-black text-4xl lg:text-7xl;
+}
+.h2 {
+  @apply font-black text-2xl lg:text-6xl;
+}
+.h3 {
+  @apply text-xl lg:text-3xl;
+}
+.h4 {
+  @apply font-bold text-lg lg:text-4xl;
+}
+.h5 {
+  @apply font-black;
+}
+.h6 {
+  @apply font-black;
+}
+.p {
+  @apply sm:text-lg;
+  font-family: 'Lucida Grande';
+}
+
+.a {
+  @apply text-neutral-700 text-xl font-bold dark:text-light dark:hover:text-gray-100 hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-full px-5 py-4;
+}
 
 @font-face {
   font-family: 'Open Sans';
@@ -32,8 +51,7 @@
   font-weight: 700;
   src: url('/fonts/open-sans-v29-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('/fonts/open-sans-v29-latin-700.eot?#iefix')
-      format('embedded-opentype'),
+    url('/fonts/open-sans-v29-latin-700.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-700.woff2') format('woff2'),
     /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-700.woff')
       format('woff'),
@@ -50,8 +68,7 @@
   font-weight: 800;
   src: url('/fonts/open-sans-v29-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
-    url('/fonts/open-sans-v29-latin-800.eot?#iefix')
-      format('embedded-opentype'),
+    url('/fonts/open-sans-v29-latin-800.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-800.woff2') format('woff2'),
     /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-800.woff')
       format('woff'),

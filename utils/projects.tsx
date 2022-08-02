@@ -4,7 +4,7 @@ const projects = [
     githubUrl: '/',
     siteUrl: '/',
     title: 'Project Name',
-    tech: ['React', 'TypeScript', 'NextJS', 'TailwindCSS'],
+    tech: ['React', 'TypeScript', 'NextJS', 'TailwindCSS', 'React', 'TypeScript', 'NextJS', 'TailwindCSS'],
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, expedita?Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },

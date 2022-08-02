@@ -1,24 +1,6 @@
 @layer components {
-  
-  .active {
-    @apply text-gray-100/50;
-  }
-
-  .card {
-    @apply shadow-lg rounded-md p-5 tracking-widest leading-loose;
-  }
-
-  .footer {
-    @apply flex w-full p-5 justify-center gap-6 uppercase font-extralight tracking-tighter;
-    font-family: 'CabinetGrotesk';
-  }
-
   .button {
-    @apply px-8 py-4 font-bold text-lg uppercase rounded-full bg-dark dark:bg-secondary  text-light shadow-lg;
-  }
-
-  .page-padding {
-    @apply pt-56 pb-8;
+    @apply px-8 py-4 font-bold text-lg uppercase rounded-full bg-dark dark:bg-secondary  text-light shadow-lg hover:scale-105 transition-all duration-300 ease-linear;
   }
 
   .hover-underline-animation {

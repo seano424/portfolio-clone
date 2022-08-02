@@ -74,16 +74,14 @@ export default function Navbar(props: Props) {
           />
         </li>
       </ul>
-      <ul className="gap-12 xl:gap-20 hidden lg:flex items-center justify-center text-xl text-gray-500 dark:text-light">
+      <ul className="gap-12 xl:gap-20 hidden lg:flex items-center justify-center">
         {navLinks.map((link) => (
-          <li key={link.title}>
+          <li
+            className="transform transition-all duration-700 dark:hover:scale-110"
+            key={link.title}
+          >
             <Link href={link.url}>
-              <a
-                className={`hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-3xl px-5 py-3
-                `}
-              >
-                {link.title}
-              </a>
+              <a className="a">{link.title}</a>
             </Link>
           </li>
         ))}

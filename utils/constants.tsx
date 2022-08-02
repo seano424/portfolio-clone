@@ -1,9 +1,5 @@
 const navLinks = [
   {
-    title: 'Home',
-    url: '/',
-  },
-  {
     title: 'About',
     url: '#about',
   },
@@ -14,6 +10,10 @@ const navLinks = [
   {
     title: 'Contact',
     url: '#contact',
+  },
+  {
+    title: 'Resume',
+    url: '/resume',
   },
 ]
 

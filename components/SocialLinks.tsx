@@ -29,7 +29,7 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex space-x-4 justify-center lg:justify-start lg:pl-4">
+    <div className="flex space-x-8 justify-center">
       {socialLinks.map((link) => (
         <Link href={link.href} key={link.name}>
           <a
@@ -45,7 +45,7 @@ export default function SocialLinks() {
               viewBox="0 0 24 24"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="h-5 w-5"
+              className="h-8 w-8"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"

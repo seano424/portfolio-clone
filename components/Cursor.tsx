@@ -62,7 +62,7 @@ export default function Cursor() {
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (
     <div
-      className={`fixed transform -translate-y-1/2 -translate-x-1/2 mix-blend-color-dodge dark:mix-blend-difference pointer-events-none border-[1px] border-primary dark:border-fuchsia-500 h-10 w-10 rounded-full z-50  transition-opacity duration-300 ease-in-outease-in-out
+      className={`fixed transform -translate-y-1/2 -translate-x-1/2 mix-blend-color-dodge dark:mix-blend-difference pointer-events-none border-[1px] border-primary dark:border-fuchsia-500 h-10 w-10 rounded-full z-50  transition-opacity duration-300 ease-in-outease-in-out dark:hidden
         ${hidden ? 'opacity-0' : 'opacity-100'}
         ${
           clicked
