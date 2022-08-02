@@ -9,7 +9,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="px-base flex text-center flex-col items-center justify-center gap-10 py-base"
+      className="px-base flex text-center flex-col items-center justify-center gap-10 pb-20 pt-32 md:py-base"
     >
       <div className="relative h-80 w-80">
         <Image

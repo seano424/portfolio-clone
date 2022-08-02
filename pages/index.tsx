@@ -46,11 +46,6 @@ const Home = () => {
           </p>
         </div>
       </section>
-
-      <section className='py-base px-base'>
-        <h2 className='h2'>Work Experience</h2>
-        <h3 className='h3'>Here's a brief rundown of my recent experience </h3>
-      </section>
       <Projects />
     </Layout>
   )
