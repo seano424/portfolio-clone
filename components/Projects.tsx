@@ -1,8 +1,6 @@
 import { projects } from 'utils/projects'
 import Image from 'next/image'
 import Link from 'next/link'
-import GitHub from '../public/icons/GitHub'
-
 interface Props {
   heading?: string
 }
