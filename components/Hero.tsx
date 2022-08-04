@@ -34,9 +34,9 @@ export default function AboutMe() {
               target="_blank"
               rel="noreferrer"
             >
-              {link.icon === 'GitHub' && <GitHub className="w-8 h-8" />}
-              {link.icon === 'Twitter' && <Twitter className="w-8 h-8" />}
-              {link.icon === 'LinkedIn' && <LinkedIn className="w-8 h-8" />}
+              {link.icon === 'GitHub' && <GitHub className="w-8 h-8 hover:text-primary transition-all duration-300 ease-linear text-green-500 dark:text-green-200 dark:hover:text-primary" />}
+              {link.icon === 'Twitter' && <Twitter className="w-8 h-8 hover:text-primary transition-all duration-200 ease-linear text-blue-500 dark:hover:text-white dark:text-secondary" />}
+              {link.icon === 'LinkedIn' && <LinkedIn className="w-8 h-8 hover:text-secondary transition-all duration-700 ease-linear text-primary dark:text-blue-200 dark:hover:text-white" />}
             </a>
           </Link>
         ))}
