@@ -13,18 +13,18 @@ export default function Projects(props: Props) {
       id="projects"
       className="py-base px-base bg-gray-100 dark:bg-gray-900"
     >
-      <h2 className="h2 text-secondary my-20 tracking-tighter underline underline-offset-[14px] lg:mb-40 text-center leading-8">{heading}</h2>
+      <h2 className="h2 uppercase text-secondary my-20 tracking-tighter border-b-4 pb-4 border-secondary lg:mb-32 text-center lg:leading-8 lg:pb-10 lg:border-b-2">{heading}</h2>
       {projects.map((project, i) => (
         <article
           key={i}
-          className="grid grid-cols-1 lg:grid-cols-8 gap-8 mb-40"
+          className="grid grid-cols-1 lg:grid-cols-8 gap-8 mb-20 rounded-md shadow-md lg:shadow-none lg:mb-40"
         >
           <div className="col-span-8 lg:col-span-3 flex flex-col gap-8 text-center lg:text-left">
-            <h4 className="h4">{project.title}</h4>
+            <h4 className="h4 uppercase tracking-tighter font-black">{project.title}</h4>
             <div className="hidden lg:flex flex-col gap-4">
               <p className="p">{project.description}</p>
             </div>
-            <div className="flex justify-center items-center gap-4 lg:justify-start">
+            <div className="hidden lg:flex justify-center items-center gap-4 lg:justify-start">
               <Link href={project.siteUrl}>
                 <a className="button text-sm dark:bg-light dark:text-black lg:text-xl">
                   Visit {project.title}
