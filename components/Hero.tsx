@@ -11,7 +11,7 @@ export default function AboutMe() {
   return (
     <Element name="home">
       <section className="px-base flex text-center flex-col items-center justify-center gap-10 pb-20 pt-20 lg:pt-32 md:py-base">
-        <div className="relative h-64 w-64 lg:h-80 lg:w-80">
+        <div className="relative h-64 w-64 md:h-80 md:w-80">
           <Image
             className="object-cover rounded-full"
             src="/images/mebw.webp"
@@ -47,18 +47,18 @@ export default function AboutMe() {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col-reverse justify-center  gap-4 lg:gap-10 lg:flex-row">
-          <button
-            onClick={() => scrollTo('projects', null, -70)}
-            className="button"
-          >
-            See my work
-          </button>
+        <div className="flex justify-center  gap-4 lg:gap-10 lg:flex-row">
           <button
             onClick={() => scrollTo('about', null, -40)}
             className="button bg-white dark:bg-light text-dark"
           >
             More About Me
+          </button>
+          <button
+            onClick={() => scrollTo('projects', null, -70)}
+            className="button"
+          >
+            See my work
           </button>
         </div>
       </section>

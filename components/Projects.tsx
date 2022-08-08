@@ -18,12 +18,10 @@ export default function Projects(props: Props) {
         {projects.map((project, i) => (
           <article
             key={i}
-            className="grid grid-cols-1 lg:grid-cols-8 gap-8 mb-20 rounded-md shadow-md lg:shadow-none lg:mb-40"
+            className="grid grid-cols-1 mb-20 rounded-2xl shadow-2xl lg:shadow-none lg:mb-40 lg:grid-cols-8 lg:gap-8"
           >
-            <div className="col-span-8 lg:col-span-3 flex flex-col gap-8 text-center lg:text-left">
-              <h4 className="h4 uppercase tracking-tighter font-black">
-                {project.title}
-              </h4>
+            <div className="col-span-8 lg:col-span-3 flex flex-col gap-8 px-5 py-8 text-center lg:text-left">
+              <h3 className="h3">{project.title}</h3>
               <div className="hidden lg:flex flex-col gap-4">
                 <p className="p">{project.description}</p>
               </div>
@@ -45,13 +43,12 @@ export default function Projects(props: Props) {
                 ))}
               </ul>
             </div>
-            <div className="col-span-8 lg:col-span-5 shadow-2xl rounded-2xl">
+            <div className="col-span-8 lg:col-span-5 shadow-2xl rounded-2xl relative w-full h-64 lg:h-[450px]">
               <Image
-                className="object-cover rounded-2xl"
+                className="object-cover rounded-b-2xl"
                 src={project.image}
                 alt={project.title}
-                height="450"
-                width="730"
+                layout="fill"
               />
             </div>
           </article>

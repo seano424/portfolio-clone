@@ -7,7 +7,7 @@ export default function AboutMe() {
       <section className="py-base px-base">
         <h3 className="h3 text-center text-secondary">About Me</h3>
         <h2 className="h2 text-center mb-8">Here's my story</h2>
-        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-600 dark:text-light/90">
+        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-800 dark:text-light/90 lg:text-3xl lg:leading-[50px]">
           <p>
             I'm Sean, a passionate front-end developer specializing in React and
             JavaScript. My mission is to translate user-focussed designs into

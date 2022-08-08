@@ -1,6 +1,6 @@
 @layer components {
   .button {
-    @apply px-8 py-4 font-bold uppercase rounded-full bg-dark dark:bg-secondary  text-light shadow-lg hover:scale-105 transition-all duration-300 ease-linear lg:text-lg;
+    @apply px-5 py-4 font-bold uppercase rounded-full bg-dark dark:bg-secondary  text-light shadow-lg hover:scale-105 transition-all duration-300 ease-linear text-sm md:text-lg md:px-8;
   }
 
   .hover-underline-animation {
