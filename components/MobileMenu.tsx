@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'utils/constants'
 import { scrollTo } from 'utils/functions'
@@ -6,10 +7,28 @@ interface Props {
   state: {
     isMobileNavOpen: boolean
   }
+  setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
 }
 
 export default function Menu(props: Props) {
-  const { state } = props
+  const { state, setState } = props
+
+  async function delay(ms) {
+    await new Promise((resolve) => setTimeout(() => resolve(null), ms))
+  }
+
+  function handleMobileNav() {
+    setState((prevState) => ({
+      ...prevState,
+      isMobileNavOpen: !prevState.isMobileNavOpen,
+    }))
+  }
+
+  const handleNavigation = async (url) => {
+    scrollTo(url, null, -60)
+    await delay(400)
+    handleMobileNav()
+  }
 
   return (
     <AnimatePresence>
@@ -31,7 +50,7 @@ export default function Menu(props: Props) {
                     ${i === 2 && 'duration-500'}
                     ${i === 3 && 'duration-700'}
                   `}
-                  onClick={() => scrollTo(link.url)}
+                  onClick={() => handleNavigation(link.url)}
                 >
                   {link.title}
                 </button>

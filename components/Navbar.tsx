@@ -42,6 +42,7 @@ export default function Navbar(props: Props) {
       isMobileNavOpen: !prevState.isMobileNavOpen,
     }))
   }
+  
   function handleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }

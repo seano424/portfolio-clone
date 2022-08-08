@@ -40,7 +40,7 @@ export default function Layout(props: Props) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Navbar state={state} setState={setState} title={title} />
-      <MobileMenu state={state} />
+      <MobileMenu state={state} setState={setState} />
       <Cursor />
       <main className="relative">
         <div className="flex-1 w-full h-full">{children}</div>
