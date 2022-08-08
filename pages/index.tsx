@@ -11,7 +11,7 @@ const Home = () => {
       <section className="py-base px-base">
         <h3 className="h3 text-center text-secondary">About Me</h3>
         <h2 className="h2 text-center mb-8">Here's my story</h2>
-        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-600">
+        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-600 dark:text-light/90">
           <p>
             I'm Sean, a passionate front-end developer specializing in React and
             JavaScript. My mission is to translate user-focussed designs into
