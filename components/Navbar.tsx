@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
+import { scrollTo } from 'utils/functions'
 import { navLinks } from '../utils/constants'
 
 interface Props {
@@ -50,18 +51,16 @@ export default function Navbar(props: Props) {
     <nav className="fixed h-20 z-50 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm flex justify-between items-center w-full py-4 px-base">
       <ul>
         <li className="hidden lg:flex uppercase font-bold text-2xl hover:text-primary transition-all duration-700 ease-linear">
-          <Link href="/">
-            <a className="relative h-12 w-12 cursor-pointer">
-              <Image
-                className="object-cover rounded-full"
-                src="/images/mebw.webp"
-                alt="Image of Sean"
-                layout="fill"
-                sizes="20vw"
-                priority
-              />
-            </a>
-          </Link>
+          <button onClick={() => scrollTo('home')} className="relative h-12 w-12 cursor-pointer">
+            <Image
+              className="object-cover rounded-full"
+              src="/images/mebw.webp"
+              alt="Image of Sean"
+              layout="fill"
+              sizes="20vw"
+              priority
+            />
+          </button>
         </li>
         <li id="hamburger" className="lg:hidden">
           <Hamburger
@@ -80,9 +79,9 @@ export default function Navbar(props: Props) {
             className="transform transition-all duration-700 dark:hover:scale-110"
             key={link.title}
           >
-            <Link href={link.url}>
-              <a className="a">{link.title}</a>
-            </Link>
+            <button className="a" onClick={() => scrollTo(link.url)}>
+              {link.title}
+            </button>
           </li>
         ))}
       </ul>

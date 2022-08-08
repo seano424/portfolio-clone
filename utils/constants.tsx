@@ -1,19 +1,19 @@
 const navLinks = [
   {
     title: 'About',
-    url: '#about',
+    url: 'about',
   },
   {
     title: 'Projects',
-    url: '#projects',
+    url: 'projects',
   },
   {
     title: 'Contact',
-    url: '#contact',
+    url: 'contact',
   },
   {
     title: 'Resume',
-    url: '/resume',
+    url: 'resume',
   },
 ]
 
