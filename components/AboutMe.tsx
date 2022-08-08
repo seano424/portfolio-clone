@@ -7,7 +7,7 @@ export default function AboutMe() {
       <section className="py-base px-base">
         <h3 className="h3 text-center text-secondary">About Me</h3>
         <h2 className="h2 text-center mb-8">Here's my story</h2>
-        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-800 dark:text-light/90 lg:text-3xl lg:leading-[50px]">
+        <div className="text-2xl flex flex-col gap-6 leading-[40px] text-slate-800 dark:text-light/90 lg:text-[1.7rem] lg:leading-[50px]">
           <p>
             I'm Sean, a passionate front-end developer specializing in React and
             JavaScript. My mission is to translate user-focussed designs into
@@ -27,7 +27,7 @@ export default function AboutMe() {
             free time I love the great outdoors - diving 🤿, hiking 🏔, traveling
             🐫, going to the beach 🐳, reading fiction and various publications
             about the newest technology trends and other programming languages,
-            and dabbling in photography 📸. You can find me on{' '}
+            as well as dabbling in photography 📸. You can find me on{' '}
             <Link href="/">
               <a className="text-secondary hover:underline transition-all duration-300">
                 Twitter
@@ -35,8 +35,8 @@ export default function AboutMe() {
             </Link>{' '}
             or{' '}
             <Link href="/">
-              <a className="text-emerald-600 hover:underline transition-all duration-300">
-                GitHub
+              <a className="text-emerald-700 hover:underline transition-all duration-300">
+                GitHub!
               </a>
             </Link>
           </p>
