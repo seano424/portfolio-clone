@@ -30,6 +30,10 @@ export default function Layout(props: Props) {
       '\n',
       '🤗'
     )
+    setState(prevState => ({
+      ...prevState,
+      mounted: true
+    }))
   }, [])
 
   return (
@@ -41,7 +45,7 @@ export default function Layout(props: Props) {
       </Head>
       <Navbar state={state} setState={setState} title={title} />
       <MobileMenu state={state} setState={setState} />
-      <Cursor />
+      {state.mounted && <Cursor />}
       <main className="relative">
         <div className="flex-1 w-full h-full">{children}</div>
         <Footer />
