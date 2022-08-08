@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
@@ -51,7 +50,10 @@ export default function Navbar(props: Props) {
     <nav className="fixed h-20 z-50 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm flex justify-between items-center w-full py-4 px-base">
       <ul>
         <li className="hidden lg:flex uppercase font-bold text-2xl hover:text-primary transition-all duration-700 ease-linear">
-          <button onClick={() => scrollTo('home')} className="relative h-12 w-12 cursor-pointer">
+          <button
+            onClick={() => scrollTo('home')}
+            className="relative h-12 w-12 cursor-pointer"
+          >
             <Image
               className="object-cover rounded-full"
               src="/images/mebw.webp"

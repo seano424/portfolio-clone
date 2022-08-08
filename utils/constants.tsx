@@ -20,23 +20,23 @@ const navLinks = [
 const mobileNavLinks = [
   {
     title: 'Home',
-    url: '/',
+    url: 'home',
   },
   {
     title: 'Projects',
-    url: '#projects',
+    url: 'projects',
   },
   {
     title: 'About',
-    url: '#about',
+    url: 'about',
   },
   {
     title: 'Contact',
-    url: '#contact',
+    url: 'contact',
   },
   {
     title: 'Resume',
-    url: '#resume',
+    url: 'resume',
   },
 ]
 

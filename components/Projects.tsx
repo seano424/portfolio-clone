@@ -12,7 +12,7 @@ export default function Projects(props: Props) {
   return (
     <Element name="projects">
       <section className="py-base px-base bg-gray-100 dark:bg-gray-900">
-        <h2 className="h2 uppercase text-secondary my-20 tracking-tighter border-b-4 pb-4 border-secondary lg:mb-32 text-center lg:leading-8 lg:pb-10 lg:border-b-2">
+        <h2 className="h2 uppercase text-secondary my-20 tracking-tighter lg:mb-32 text-center lg:leading-8">
           {heading}
         </h2>
         {projects.map((project, i) => (

@@ -2,7 +2,7 @@ import { ReactNode, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Menu from './Menu'
+import MobileMenu from './MobileMenu'
 import Cursor from './Cursor'
 interface Props {
   children: ReactNode
@@ -40,7 +40,7 @@ export default function Layout(props: Props) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Navbar state={state} setState={setState} title={title} />
-      <Menu state={state} />
+      <MobileMenu state={state} />
       <Cursor />
       <main className="relative">
         <div className="flex-1 w-full h-full">{children}</div>
