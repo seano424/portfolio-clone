@@ -55,7 +55,7 @@
   font-family: 'Open-sans-fallback';
   size-adjust: 97.38%;
   ascent-override: 99%;
-  src: local('Arial');
+  src: local('Segoe UI');
 }
 .h1 {
   @apply font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
