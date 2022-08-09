@@ -21,11 +21,11 @@ export default function AboutMe() {
             priority
           />
         </div>
-        <h1 className="h1">
+        <h1 className="h1 min-h-[50px]">
           Hi! 👋 My name is Sean. I build websites with modern tools and
           technologies!
         </h1>
-        <div className="flex space-x-8 justify-center">
+        <div className="flex space-x-8 justify-center min-h-[40px]">
           {socialLinks.map((link) => (
             <Link href={link.href} key={link.name}>
               <a
