@@ -10,7 +10,7 @@ import { scrollTo } from 'utils/functions'
 export default function AboutMe() {
   return (
     <Element name="home">
-      <section className="px-base flex text-center flex-col items-center justify-center gap-10 pb-20 pt-20 lg:pt-32 md:py-base">
+      <section className="px-base flex text-center flex-col items-center justify-center gap-8 pb-20 pt-20 md:py-base lg:pt-32 xl:pt-24">
         <div className="relative h-64 w-64 md:h-80 md:w-80">
           <Image
             className="object-cover rounded-full"
@@ -21,7 +21,7 @@ export default function AboutMe() {
             priority
           />
         </div>
-        <h1 className="h1 min-h-[50px]">
+        <h1 className="h1 min-h-[200px] md:min-h-[150px] lg:min-h-[180px] 2xl:min-h-[225px]">
           Hi! 👋 My name is Sean. I build websites with modern tools and
           technologies!
         </h1>
