@@ -10,8 +10,8 @@ module.exports = {
         open: '"Open Sans", serif',
       },
       colors: {
-        primary: '#FF007E',
-        secondary: '#188FD9',
+        primary: '#ec008c',
+        secondary: '#0070f3',
         light: '#F9FAFB',
         dark: '#030507',
         'neutral-superlight': '#F7F7F7',
