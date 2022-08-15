@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { socialLinks, navLinks } from 'utils/constants'
+import { socialLinks, navLinks } from 'lib/links'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import { scrollTo } from 'utils/functions'
+import { scrollTo } from 'lib/functions'
 
 export default function Footer() {
   return (

@@ -10,20 +10,4 @@
   .px-base {
     @apply px-6 sm:px-10 lg:px-20 xl:px-64;
   }
-
-  .masonry {
-    gap: 2em;
-    column-count: 1;
-  }
-  .masonry-sm {
-    gap: 2em;
-    column-count: 2;
-  }
-  .masonry-md {
-    gap: 2em;
-    column-count: 3;
-  }
-  .break-inside {
-    break-inside: avoid;
-  }
 }

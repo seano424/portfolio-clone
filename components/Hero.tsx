@@ -3,9 +3,9 @@ import Link from 'next/link'
 import GitHub from '@/icons/GitHub'
 import LinkedIn from '@/icons/LinkedIn'
 import Twitter from '@/icons/Twitter'
-import { socialLinks } from 'utils/constants'
+import { socialLinks } from 'lib/links'
 import { Element } from 'react-scroll'
-import { scrollTo } from 'utils/functions'
+import { scrollTo } from 'lib/functions'
 
 export default function AboutMe() {
   return (

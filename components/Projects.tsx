@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import GitHub from '../public/icons/GitHub'
-import { projects } from 'utils/constants'
+import { projects } from 'lib/projectData'
 import { Element } from 'react-scroll'
 interface Props {
   heading?: string

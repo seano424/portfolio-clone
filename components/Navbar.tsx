@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
-import { scrollTo } from 'utils/functions'
-import { navLinks } from '../utils/constants'
+import { scrollTo } from 'lib/functions'
+import { navLinks } from '../lib/links'
 
 interface Props {
   logo?: string
