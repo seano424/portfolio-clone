@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
-import { mobileNavLinks } from 'utils/constants'
-import { scrollTo } from 'utils/functions'
+import { mobileNavLinks } from 'lib/links'
+import { scrollTo } from 'lib/functions'
 
 interface Props {
   state: {
@@ -26,21 +26,27 @@ export default function Menu(props: Props) {
 
   const handleNavigation = async (url) => {
     scrollTo(url, null, -60)
-    await delay(400)
     handleMobileNav()
   }
 
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       {state.isMobileNavOpen && (
         <m.div
           key="modal"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -400 }}
-          className="lg:hidden fixed top-20 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm min-h-screen z-50 w-3/4 md:w-1/2 flex justify-center items-start"
+          exit={{
+            opacity: 0,
+            x: -400,
+            transition: {
+              duration: .6,
+              ease: [0.83, 0, 0.17, 1],
+            },
+          }}
+          className="lg:hidden fixed top-20 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm min-h-screen z-50 w-10/12 md:w-1/2 flex justify-center items-start"
         >
-          <ul className="px-base pt-20 grid gap-8 sm:gap-16">
+          <ul className="px-base py-base grid gap-8 sm:gap-16">
             {mobileNavLinks.map((link, i) => (
               <li key={i}>
                 <button
