@@ -12,16 +12,20 @@ export default function Projects(props: Props) {
   return (
     <Element name="projects">
       <section className="py-base bg-gray-100 dark:bg-gray-900 px-base">
-        <h2 className="h2 pt-10 pb-5 uppercase text-secondary text-center lg:mb-32 lg:leading-8 xl:my-20">
-          {heading}
+        <h2 className="my-10 font-extrabold leading-tighter tracking-tighter text-5xl uppercase text-center md:text-6xl lg:mt-0 lg:mb-20 lg:leading-8">
+          My{' '}
+          <span className="from-primary bg-clip-text bg-gradient-to-r text-transparent to-secondary">
+            Featured{' '}
+          </span>
+          Projects
         </h2>
         {projects.map((project, i) => (
           <article
             key={i}
-            className="grid grid-cols-1 mb-10 xl:rounded-2xl xl:shadow-2xl lg:shadow-none lg:mb-40 lg:grid-cols-8 lg:gap-8 xl:mb-20 xl:p-10"
+            className="grid grid-cols-1 mb-10 xl:rounded-2xl lg:shadow-none lg:mb-40 lg:grid-cols-8 lg:gap-8 xl:mb-20 xl:p-10"
           >
             <div className="col-span-8 lg:col-span-3 flex flex-col gap-4 py-4 text-center lg:text-left">
-              <h3 className="h3 uppercase">{project.title}</h3>
+              <h3 className="h3 uppercase text-secondary">{project.title}</h3>
               <div className="hidden lg:flex flex-col gap-4">
                 <p className="p">{project.description}</p>
               </div>
