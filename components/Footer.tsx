@@ -3,7 +3,7 @@ import { socialLinks, navLinks } from 'lib/links'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import { scrollTo } from 'lib/functions'
+import { scrollTo } from 'lib/helpers'
 
 export default function Footer() {
   return (

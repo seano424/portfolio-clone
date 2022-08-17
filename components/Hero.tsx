@@ -5,7 +5,7 @@ import LinkedIn from '@/icons/LinkedIn'
 import Twitter from '@/icons/Twitter'
 import { socialLinks } from 'lib/links'
 import { Element } from 'react-scroll'
-import { scrollTo } from 'lib/functions'
+import { scrollTo } from 'lib/helpers'
 
 export default function AboutMe() {
   return (

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
-import { scrollTo } from 'lib/functions'
+import { scrollTo } from 'lib/helpers'
 
 interface Props {
   state: {
