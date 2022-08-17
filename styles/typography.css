@@ -59,7 +59,7 @@
 }
 
 .h1 {
-  @apply text-4xl font-black sm:text-5xl lg:text-6xl xl:text-7xl;
+  @apply text-3xl font-black sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
   font-family: 'Open Sans', Open-sans-fallback, sans-serif;
 }
 .h2 {

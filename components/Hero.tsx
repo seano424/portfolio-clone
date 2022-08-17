@@ -17,12 +17,11 @@ export default function AboutMe() {
             src="/images/mebw.webp"
             alt="Hero Image"
             layout="fill"
-            sizes="20vw"
             priority
           />
         </div>
         <h1 className="h1 min-h-[200px] md:min-h-[150px] lg:min-h-[180px] 2xl:min-h-[225px]">
-          Hi! 👋 My name is Sean. I build websites with modern tools and
+          Hi! 👋 My name is Sean. I build websites with modern tools &
           technologies!
         </h1>
         <div className="flex min-h-[40px] justify-center space-x-8">
