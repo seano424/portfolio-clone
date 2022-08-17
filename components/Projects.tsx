@@ -11,8 +11,8 @@ export default function Projects(props: Props) {
   const { heading = 'Featured Projects' } = props
   return (
     <Element name="projects">
-      <section className="py-base px-base bg-gray-100 dark:bg-gray-900">
-        <h2 className="leading-tighter my-10 text-center text-5xl font-extrabold uppercase tracking-tighter md:text-6xl lg:mt-0 lg:mb-20 lg:leading-8">
+      <section className="px-base bg-gray-100 py-10 dark:bg-gray-900 lg:py-32">
+        <h2 className="h2 my-10 text-center lg:mt-0 lg:mb-20">
           My{' '}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Featured{' '}
@@ -25,7 +25,9 @@ export default function Projects(props: Props) {
             className="mb-10 grid grid-cols-1 lg:mb-40 lg:grid-cols-8 lg:gap-8 lg:shadow-none xl:mb-20 xl:rounded-2xl xl:p-10"
           >
             <div className="col-span-8 flex flex-col gap-4 py-4 text-center lg:col-span-3 lg:text-left">
-              <h3 className="h3 uppercase text-secondary">{project.title}</h3>
+              <h3 className="h3 font-extrabold uppercase tracking-tighter text-secondary dark:text-white">
+                {project.title}
+              </h3>
               <div className="hidden flex-col gap-4 lg:flex">
                 <p className="p">{project.description}</p>
               </div>

@@ -63,8 +63,9 @@
   font-family: 'Open Sans', Open-sans-fallback, sans-serif;
 }
 .h2 {
-  @apply text-4xl font-black md:text-6xl;
+  @apply text-5xl font-extrabold uppercase tracking-tighter md:text-7xl lg:text-8xl lg:leading-8;
 }
+
 .h3 {
   @apply text-2xl font-bold md:text-4xl;
 }
