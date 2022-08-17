@@ -59,14 +59,14 @@
 }
 
 .h1 {
-  @apply font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+  @apply text-4xl font-black sm:text-5xl lg:text-6xl xl:text-7xl;
   font-family: 'Open Sans', Open-sans-fallback, sans-serif;
 }
 .h2 {
-  @apply font-black text-4xl md:text-6xl;
+  @apply text-4xl font-black md:text-6xl;
 }
 .h3 {
-  @apply font-bold text-2xl md:text-4xl;
+  @apply text-2xl font-bold md:text-4xl;
 }
 .p {
   @apply sm:text-lg;
@@ -74,7 +74,5 @@
 }
 
 .a {
-  @apply text-neutral-700 text-xl font-bold dark:text-light dark:hover:text-gray-100 hover:bg-gray-200/60 dark:hover:bg-dark transition-all duration-300 ease-linear rounded-full px-5 py-4;
+  @apply rounded-full px-5 py-4 text-xl font-bold text-neutral-700 transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-dark dark:hover:text-gray-100;
 }
-
-
