@@ -6,7 +6,7 @@ export default function Blogs(props) {
   const { blogs } = props
 
   return (
-    <section className="flex flex-col py-base px-base">
+    <section className="py-base px-base flex flex-col">
       {/* <pre>{JSON.stringify(blogs, null, 2)}</pre> */}
       {blogs.map((blog) => (
         <Link key={blog} href={`/blogs/${slugify(blog).toLowerCase()}`}>
