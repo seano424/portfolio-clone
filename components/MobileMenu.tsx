@@ -40,17 +40,17 @@ export default function Menu(props: Props) {
             opacity: 0,
             x: -400,
             transition: {
-              duration: .6,
+              duration: 0.6,
               ease: [0.83, 0, 0.17, 1],
             },
           }}
-          className="lg:hidden fixed top-20 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm min-h-screen z-50 w-10/12 md:w-1/2 flex justify-center items-start"
+          className="fixed top-20 z-50 flex min-h-screen w-10/12 items-start justify-center bg-light/90 filter backdrop-blur-sm dark:bg-dark/90 md:w-1/2 lg:hidden"
         >
           <ul className="px-base py-base grid gap-8 sm:gap-16">
             {mobileNavLinks.map((link, i) => (
               <li key={i}>
                 <button
-                  className={`hover:text-dark dark:hover:text-light transition-all ease-linear drop-shadow-2xl font-black uppercase tracking-tighter text-fuchsia-400 text-4xl sm:text-6xl
+                  className={`text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-dark dark:hover:text-light sm:text-6xl
                     ${i === 0 && 'duration-200'}
                     ${i === 1 && 'duration-300'}
                     ${i === 2 && 'duration-500'}

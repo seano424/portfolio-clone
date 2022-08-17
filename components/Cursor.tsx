@@ -62,16 +62,16 @@ export default function Cursor() {
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (
     <div
-      className={`fixed transform -translate-y-1/2 -translate-x-1/2 mix-blend-color-dodge dark:mix-blend-difference pointer-events-none border-[1px] border-primary dark:border-fuchsia-500 h-10 w-10 rounded-full z-50  transition-opacity duration-300 ease-in-outease-in-out dark:hidden
+      className={`ease-in-outease-in-out pointer-events-none fixed z-50 h-10 w-10 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[1px] border-primary mix-blend-color-dodge transition-opacity  duration-300 dark:hidden dark:border-fuchsia-500 dark:mix-blend-difference
         ${hidden ? 'opacity-0' : 'opacity-100'}
         ${
           clicked
-            ? 'scale-90 bg-dark transform -translate-y-1/2 -translate-x-1/2'
+            ? '-translate-y-1/2 -translate-x-1/2 scale-90 transform bg-dark'
             : 'scale-100'
         }
         ${
           linkHovered
-            ? 'transform -translate-y-1/2 -translate-x-1/2 scale-125 bg-dark dark:bg-teal-50 transition-transform duration-300 ease-linear'
+            ? '-translate-y-1/2 -translate-x-1/2 scale-125 transform bg-dark transition-transform duration-300 ease-linear dark:bg-teal-50'
             : 'scale-100'
         }
       `}

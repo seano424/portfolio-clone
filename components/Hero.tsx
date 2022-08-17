@@ -10,10 +10,10 @@ import { scrollTo } from 'lib/functions'
 export default function AboutMe() {
   return (
     <Element name="home">
-      <section className="px-base flex text-center flex-col items-center justify-center gap-8 pb-20 pt-20 md:py-base lg:pt-32 xl:pt-24">
+      <section className="px-base md:py-base flex flex-col items-center justify-center gap-8 pb-20 pt-20 text-center lg:pt-32 xl:pt-24">
         <div className="relative h-64 w-64 md:h-80 md:w-80">
           <Image
-            className="object-cover rounded-full"
+            className="rounded-full object-cover"
             src="/images/mebw.webp"
             alt="Hero Image"
             layout="fill"
@@ -25,7 +25,7 @@ export default function AboutMe() {
           Hi! 👋 My name is Sean. I build websites with modern tools and
           technologies!
         </h1>
-        <div className="flex space-x-8 justify-center min-h-[40px]">
+        <div className="flex min-h-[40px] justify-center space-x-8">
           {socialLinks.map((link) => (
             <Link href={link.href} key={link.name}>
               <a
@@ -35,22 +35,22 @@ export default function AboutMe() {
                 rel="noreferrer"
               >
                 {link.icon === 'GitHub' && (
-                  <GitHub className="w-8 h-8 hover:text-primary transition-all duration-300 ease-linear text-green-500 dark:text-green-200 dark:hover:text-primary" />
+                  <GitHub className="h-8 w-8 text-green-500 transition-all duration-300 ease-linear hover:text-primary dark:text-green-200 dark:hover:text-primary" />
                 )}
                 {link.icon === 'Twitter' && (
-                  <Twitter className="w-8 h-8 hover:text-primary transition-all duration-200 ease-linear text-blue-500 dark:hover:text-white dark:text-secondary" />
+                  <Twitter className="h-8 w-8 text-blue-500 transition-all duration-200 ease-linear hover:text-primary dark:text-secondary dark:hover:text-white" />
                 )}
                 {link.icon === 'LinkedIn' && (
-                  <LinkedIn className="w-8 h-8 hover:text-secondary transition-all duration-700 ease-linear text-primary dark:text-blue-200 dark:hover:text-white" />
+                  <LinkedIn className="h-8 w-8 text-primary transition-all duration-700 ease-linear hover:text-secondary dark:text-blue-200 dark:hover:text-white" />
                 )}
               </a>
             </Link>
           ))}
         </div>
-        <div className="flex justify-center  gap-4 lg:gap-10 lg:flex-row">
+        <div className="flex justify-center  gap-4 lg:flex-row lg:gap-10">
           <button
             onClick={() => scrollTo('about', null, -40)}
-            className="button bg-white dark:bg-light text-dark"
+            className="button bg-white text-dark dark:bg-light"
           >
             More About Me
           </button>

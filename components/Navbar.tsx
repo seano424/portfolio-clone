@@ -29,9 +29,9 @@ export default function Navbar(props: Props) {
       color: theme === 'dark' ? 'white' : 'black',
       icon:
         theme === 'dark' ? (
-          <SunIcon className="w-7 transition-opacity duration-500 delay-75 ease-linear" />
+          <SunIcon className="w-7 transition-opacity delay-75 duration-500 ease-linear" />
         ) : (
-          <MoonIcon className="w-7 text-fuchsia-400 transition-opacity duration-500 delay-75 ease-linear" />
+          <MoonIcon className="w-7 text-fuchsia-400 transition-opacity delay-75 duration-500 ease-linear" />
         ),
     }))
   }, [theme])
@@ -42,21 +42,21 @@ export default function Navbar(props: Props) {
       isMobileNavOpen: !prevState.isMobileNavOpen,
     }))
   }
-  
+
   function handleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
-    <nav className="fixed h-20 z-50 bg-light/90 dark:bg-dark/90 filter backdrop-blur-sm flex justify-between items-center w-full py-4 px-base">
+    <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
       <ul>
-        <li className="hidden lg:flex uppercase font-bold text-2xl hover:text-primary transition-all duration-700 ease-linear">
+        <li className="hidden text-2xl font-bold uppercase transition-all duration-700 ease-linear hover:text-primary lg:flex">
           <button
             onClick={() => scrollTo('home')}
             className="relative h-12 w-12 cursor-pointer"
           >
             <Image
-              className="object-cover rounded-full"
+              className="rounded-full object-cover"
               src="/images/mebw.webp"
               alt="Image of Sean"
               layout="fill"
@@ -76,7 +76,7 @@ export default function Navbar(props: Props) {
           />
         </li>
       </ul>
-      <ul className="gap-12 xl:gap-20 hidden lg:flex items-center justify-center">
+      <ul className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
         {navLinks.map((link) => (
           <li
             className="transform transition-all duration-700 dark:hover:scale-110"
@@ -90,9 +90,9 @@ export default function Navbar(props: Props) {
       </ul>
       <ul
         id="themeButton"
-        className="flex items-center gap-8 uppercase font-bold text-2xl"
+        className="flex items-center gap-8 text-2xl font-bold uppercase"
       >
-        <li className="flex w-10 h-10 justify-center items-center">
+        <li className="flex h-10 w-10 items-center justify-center">
           <button
             aria-label="Button to change color theme"
             onClick={handleTheme}

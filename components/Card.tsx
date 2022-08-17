@@ -3,20 +3,20 @@ import { EyeIcon } from '@heroicons/react/solid'
 
 export default function Card() {
   return (
-    <div className="h-[400px] lg:h-[300px] w-full shadow-lg bg-red-50 relative rounded-lg group cursor-pointer">
+    <div className="group relative h-[400px] w-full cursor-pointer rounded-lg bg-red-50 shadow-lg lg:h-[300px]">
       <Image
         src="/images/feedback-board.png"
         alt="Project Image"
         layout="fill"
-        className="object-cover rounded-lg"
+        className="rounded-lg object-cover"
       />
       {/* Inlay with Content */}
-      <div className="absolute inset-0 bg-blue-50/90 flex flex-col justify-center items-center gap-5 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out rounded-lg">
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-lg bg-blue-50/90 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
         <h3 className="h3 font-black">Project Name</h3>
         <div className="flex items-center space-x-4">
           <a
             aria-label="GitHub Link"
-            className="hover:text-primary transition-all duration-300 ease-linear text-green-500 dark:text-green-200"
+            className="text-green-500 transition-all duration-300 ease-linear hover:text-primary dark:text-green-200"
             href="https://github.com/seano424"
             target="_blank"
             rel="noreferrer"

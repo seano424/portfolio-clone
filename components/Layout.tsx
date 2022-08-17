@@ -30,14 +30,14 @@ export default function Layout(props: Props) {
       '\n',
       '🤗'
     )
-    setState(prevState => ({
+    setState((prevState) => ({
       ...prevState,
-      mounted: true
+      mounted: true,
     }))
   }, [])
 
   return (
-    <div className="flex flex-col font-open min-h-screen bg-light dark:bg-dark dark:text-blue-50">
+    <div className="flex min-h-screen flex-col bg-light font-open dark:bg-dark dark:text-blue-50">
       <Head>
         <title>{title}</title>
         <meta name="description" content={title} />
@@ -47,7 +47,7 @@ export default function Layout(props: Props) {
       <MobileMenu state={state} setState={setState} />
       {state.mounted && <Cursor />}
       <main className="relative">
-        <div className="flex-1 w-full h-full">{children}</div>
+        <div className="h-full w-full flex-1">{children}</div>
         <Footer />
       </main>
     </div>

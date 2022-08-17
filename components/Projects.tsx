@@ -11,10 +11,10 @@ export default function Projects(props: Props) {
   const { heading = 'Featured Projects' } = props
   return (
     <Element name="projects">
-      <section className="py-base bg-gray-100 dark:bg-gray-900 px-base">
-        <h2 className="my-10 font-extrabold leading-tighter tracking-tighter text-5xl uppercase text-center md:text-6xl lg:mt-0 lg:mb-20 lg:leading-8">
+      <section className="py-base px-base bg-gray-100 dark:bg-gray-900">
+        <h2 className="leading-tighter my-10 text-center text-5xl font-extrabold uppercase tracking-tighter md:text-6xl lg:mt-0 lg:mb-20 lg:leading-8">
           My{' '}
-          <span className="from-primary bg-clip-text bg-gradient-to-r text-transparent to-secondary">
+          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Featured{' '}
           </span>
           Projects
@@ -22,32 +22,32 @@ export default function Projects(props: Props) {
         {projects.map((project, i) => (
           <article
             key={i}
-            className="grid grid-cols-1 mb-10 xl:rounded-2xl lg:shadow-none lg:mb-40 lg:grid-cols-8 lg:gap-8 xl:mb-20 xl:p-10"
+            className="mb-10 grid grid-cols-1 lg:mb-40 lg:grid-cols-8 lg:gap-8 lg:shadow-none xl:mb-20 xl:rounded-2xl xl:p-10"
           >
-            <div className="col-span-8 lg:col-span-3 flex flex-col gap-4 py-4 text-center lg:text-left">
+            <div className="col-span-8 flex flex-col gap-4 py-4 text-center lg:col-span-3 lg:text-left">
               <h3 className="h3 uppercase text-secondary">{project.title}</h3>
-              <div className="hidden lg:flex flex-col gap-4">
+              <div className="hidden flex-col gap-4 lg:flex">
                 <p className="p">{project.description}</p>
               </div>
-              <div className="hidden lg:flex justify-center items-center gap-4 lg:justify-start">
+              <div className="hidden items-center justify-center gap-4 lg:flex lg:justify-start">
                 <Link href={project.siteUrl}>
                   <a className="button text-sm dark:bg-light dark:text-black lg:text-xl">
                     Visit Site
                   </a>
                 </Link>
                 <Link href={projects[0].githubUrl}>
-                  <a className="border-4 rounded-full p-3 flex justify-center items-center">
-                    <GitHub className="hover:text-primary hover:scale-105 transition-all duration-300 ease-linear text-emerald-500 dark:text-green-200 dark:hover:text-primary font-black w-5 h-5 lg:h-8 lg:w-8" />
+                  <a className="flex items-center justify-center rounded-full border-4 p-3">
+                    <GitHub className="h-5 w-5 font-black text-emerald-500 transition-all duration-300 ease-linear hover:scale-105 hover:text-primary dark:text-green-200 dark:hover:text-primary lg:h-8 lg:w-8" />
                   </a>
                 </Link>
               </div>
-              <ul className="flex justify-center gap-4 flex-wrap lg:justify-start">
+              <ul className="flex flex-wrap justify-center gap-4 lg:justify-start">
                 {project.tech.map((tech, i) => (
                   <li key={i}>{tech}</li>
                 ))}
               </ul>
             </div>
-            <div className="col-span-8 lg:col-span-5 shadow-2xl rounded-2xl relative w-full h-64 lg:h-[450px]">
+            <div className="relative col-span-8 h-64 w-full rounded-2xl shadow-2xl lg:col-span-5 lg:h-[450px]">
               <Image
                 className="object-cover xl:rounded-xl"
                 src={project.image}
