@@ -12,7 +12,7 @@ export default function Projects(props: Props) {
   return (
     <Element name="projects">
       <section className="px-base py-base bg-gray-100 dark:bg-gray-900">
-        <h2 className="h2 mb-16 text-center">
+        <h2 className="h2 mb-4 text-center sm:mb-16">
           My{' '}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Featured{' '}
