@@ -52,7 +52,7 @@ export default function Header(props: Props) {
       <ul>
         <li className="hidden text-2xl font-bold uppercase transition-all duration-700 ease-linear hover:text-primary lg:flex">
           <button
-            onClick={() => scrollTo('home', null, -40)}
+            onClick={() => scrollTo('home', null, -80)}
             className="relative h-12 w-12 cursor-pointer"
           >
             <Image
