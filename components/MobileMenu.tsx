@@ -13,10 +13,6 @@ interface Props {
 export default function Menu(props: Props) {
   const { state, setState } = props
 
-  async function delay(ms) {
-    await new Promise((resolve) => setTimeout(() => resolve(null), ms))
-  }
-
   function handleMobileNav() {
     setState((prevState) => ({
       ...prevState,
@@ -25,7 +21,7 @@ export default function Menu(props: Props) {
   }
 
   const handleNavigation = async (url) => {
-    scrollTo(url, null, -60)
+    scrollTo(url, 900, -80)
     handleMobileNav()
   }
 
