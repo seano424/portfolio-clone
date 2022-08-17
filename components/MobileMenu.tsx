@@ -46,7 +46,7 @@ export default function Menu(props: Props) {
           }}
           className="fixed top-20 z-50 flex min-h-screen w-10/12 items-start justify-center bg-light/90 filter backdrop-blur-sm dark:bg-dark/90 md:w-1/2 lg:hidden"
         >
-          <ul className="px-base py-base grid gap-8 sm:gap-16">
+          <ul className="px-base mt-10 grid gap-8 sm:gap-16">
             {mobileNavLinks.map((link, i) => (
               <li key={i}>
                 <button

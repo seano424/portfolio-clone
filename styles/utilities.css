@@ -1,6 +1,6 @@
 @layer utilities {
   .debug-screens::before {
-    @apply rounded shadow-none text-white bg-gray-900 m-4 opacity-100 p-2;
+    @apply m-4 rounded bg-gray-900 p-2 text-white opacity-100 shadow-none;
   }
 
   .py-base {
