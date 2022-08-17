@@ -17,7 +17,7 @@ export default function AboutMe() {
             src="/images/mebw.webp"
             alt="Hero Image"
             layout="fill"
-            sizes="100vw"
+            sizes="90vw"
             priority
           />
         </div>
