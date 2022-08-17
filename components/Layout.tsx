@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react'
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Header from './Header'
 import Footer from './Footer'
 import MobileMenu from './MobileMenu'
 import Cursor from './Cursor'
@@ -43,10 +43,10 @@ export default function Layout(props: Props) {
         <meta name="description" content={title} />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Navbar state={state} setState={setState} title={title} />
+      <Header state={state} setState={setState} title={title} />
       <MobileMenu state={state} setState={setState} />
       {state.mounted && <Cursor />}
-      <main className="relative">
+      <main className="relative top-20">
         <div className="h-full w-full flex-1">{children}</div>
         <Footer />
       </main>

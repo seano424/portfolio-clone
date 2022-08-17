@@ -4,10 +4,10 @@
   }
 
   .py-base {
-    @apply py-6 sm:py-10 md:py-32;
+    @apply py-16 lg:py-20 2xl:py-32;
   }
 
   .px-base {
-    @apply px-6 sm:px-10 lg:px-20 xl:px-64;
+    @apply px-6 sm:px-10 lg:px-20 2xl:px-64;
   }
 }

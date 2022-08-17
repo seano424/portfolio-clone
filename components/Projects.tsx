@@ -11,8 +11,8 @@ export default function Projects(props: Props) {
   const { heading = 'Featured Projects' } = props
   return (
     <Element name="projects">
-      <section className="px-base bg-gray-100 py-10 dark:bg-gray-900 lg:py-32">
-        <h2 className="h2 my-10 text-center lg:mt-0 lg:mb-20">
+      <section className="px-base py-base bg-gray-100 dark:bg-gray-900">
+        <h2 className="h2 mb-16 text-center">
           My{' '}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Featured{' '}
@@ -22,7 +22,7 @@ export default function Projects(props: Props) {
         {projects.map((project, i) => (
           <article
             key={i}
-            className="mb-10 grid grid-cols-1 lg:mb-40 lg:grid-cols-8 lg:gap-8 lg:shadow-none xl:mb-20 xl:rounded-2xl xl:p-10"
+            className="mb-10 grid grid-cols-1 border-8 lg:mb-40 lg:grid-cols-8 lg:gap-8 lg:shadow-none xl:mb-20 xl:rounded-2xl xl:p-10"
           >
             <div className="col-span-8 flex flex-col gap-4 py-4 text-center lg:col-span-3 lg:text-left">
               <h3 className="h3 font-extrabold uppercase tracking-tighter text-secondary dark:text-white">

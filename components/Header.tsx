@@ -16,7 +16,7 @@ interface Props {
   setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
 }
 
-export default function Navbar(props: Props) {
+export default function Header(props: Props) {
   const { state, setState } = props
   const [navState, setNavState] = useState({
     color: 'white',

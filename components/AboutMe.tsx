@@ -5,8 +5,10 @@ export default function AboutMe() {
   return (
     <Element name="about">
       <section className="py-base px-base">
-        <h2 className="h3 text-center text-secondary lg:mb-8">About Me</h2>
-        <h3 className="h2 mb-8 text-center">Here's my story</h3>
+        <div className="mb-8">
+          <h2 className="h3 text-center text-secondary">About Me</h2>
+          <h3 className="h2 text-center">Here's my story</h3>
+        </div>
         <div className="flex flex-col gap-6 text-2xl leading-[40px] text-slate-800 dark:text-light/90 lg:text-[1.7rem] lg:leading-[50px]">
           <p>
             I'm Sean, a passionate front-end developer specializing in React and
