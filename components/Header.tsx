@@ -1,12 +1,11 @@
 import { Dispatch, SetStateAction } from 'react'
 import { useTheme } from 'next-themes'
-import Image from 'next/image'
 // import { Squash as Hamburger } from 'hamburger-react'
 import { scrollTo } from 'lib/helpers'
-import { navLinks } from '../lib/links'
 import Link from 'next/link'
 import ThemeButton from './ThemeButton'
 import Hamburger from './Hamburger'
+import Avatar from './Avatar'
 
 interface Props {
   logo?: string
@@ -27,32 +26,21 @@ export default function Header(props: Props) {
 
   return (
     <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
-      <button
-        onClick={() => scrollTo('home', null, -80)}
-        className="relative hidden h-12 w-12 cursor-pointer transition-all duration-700 ease-linear hover:text-primary lg:flex"
-      >
-        <Image
-          className="rounded-full object-cover"
-          src="/images/mebw.webp"
-          alt="Image of Sean"
-          layout="fill"
-          sizes="20vw"
-          priority
-        />
-      </button>
-
+      <Avatar />
       <Hamburger theme={theme} state={state} setState={setState} />
-
-      <div className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
-        {navLinks.map((link) => (
-          <button
-            key={link.title}
-            className="a transform transition-all duration-700 dark:hover:scale-110"
-            onClick={() => scrollTo(link.url)}
-          >
-            {link.title}
-          </button>
-        ))}
+      <section className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
+        <button
+          className="a transform transition-all duration-700 dark:hover:scale-110"
+          onClick={() => scrollTo('projects')}
+        >
+          Projects
+        </button>
+        <button
+          className="a transform transition-all duration-700 dark:hover:scale-110"
+          onClick={() => scrollTo('about')}
+        >
+          About
+        </button>
         <Link
           href="mailto:soreilly424@gmail.com"
           target="_blank"
@@ -62,7 +50,7 @@ export default function Header(props: Props) {
             Get in touch
           </a>
         </Link>
-      </div>
+      </section>
       <ThemeButton handleTheme={handleTheme} theme={theme} />
     </nav>
   )
