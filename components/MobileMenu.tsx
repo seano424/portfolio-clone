@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
 import { scrollTo } from 'lib/helpers'
+import Link from 'next/link'
 
 interface Props {
   state: {
@@ -58,6 +59,15 @@ export default function Menu(props: Props) {
                 </button>
               </li>
             ))}
+            <Link
+              href="mailto:soreilly424@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <a className="text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-dark dark:hover:text-light sm:text-6xl">
+                Contact
+              </a>
+            </Link>
           </ul>
         </m.div>
       )}
