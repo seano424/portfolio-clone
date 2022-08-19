@@ -19,23 +19,7 @@ interface Props {
 
 export default function Header(props: Props) {
   const { state, setState } = props
-  const [navState, setNavState] = useState({
-    color: 'white',
-    icon: null,
-  })
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setNavState(() => ({
-      color: theme === 'dark' ? 'white' : 'black',
-      icon:
-        theme === 'dark' ? (
-          <SunIcon className="w-7 transition-opacity delay-75 duration-500 ease-linear" />
-        ) : (
-          <MoonIcon className="w-7 text-fuchsia-400 transition-opacity delay-75 duration-500 ease-linear" />
-        ),
-    }))
-  }, [theme])
 
   function handleMobileNav() {
     setState((prevState) => ({
@@ -66,16 +50,16 @@ export default function Header(props: Props) {
             />
           </button>
         </li>
-        <li id="hamburger" className="lg:hidden">
+        <button aria-label="Toggle Mobile Menu" className="lg:hidden">
           <Hamburger
             label="Show Menu"
             rounded
-            color={navState.color}
+            color={theme === 'light' ? 'black' : 'white'}
             size={24}
             toggled={state.isMobileNavOpen}
             toggle={handleMobileNav}
           />
-        </li>
+        </button>
       </ul>
       <ul className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
         {navLinks.map((link) => (
@@ -98,30 +82,24 @@ export default function Header(props: Props) {
           </a>
         </Link>
       </ul>
-      <ul
-        id="themeButton"
-        className="flex items-center gap-8 text-2xl font-bold uppercase"
-      >
-        <li className="flex h-10 w-10 items-center justify-center">
-          <button
-            aria-label="Button to change color theme"
-            onClick={handleTheme}
-          >
-            <AnimatePresence initial={false}>
-              <div className="flex ">
-                <m.div
-                  key={`theme-${theme}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  {navState.icon}
-                </m.div>
-              </div>
-            </AnimatePresence>
-          </button>
-        </li>
-      </ul>
+      <button aria-label="Button to change color theme" onClick={handleTheme}>
+        <AnimatePresence initial={false}>
+          <div className="flex ">
+            <m.div
+              key={`theme-${theme}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {theme === 'light' ? (
+                <MoonIcon className="w-7 text-fuchsia-400 transition-opacity delay-75 duration-500 ease-linear" />
+              ) : (
+                <SunIcon className="w-7 transition-opacity delay-75 duration-500 ease-linear" />
+              )}
+            </m.div>
+          </div>
+        </AnimatePresence>
+      </button>
     </nav>
   )
 }
