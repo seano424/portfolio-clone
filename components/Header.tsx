@@ -1,11 +1,12 @@
 import { Dispatch, SetStateAction } from 'react'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import { Squash as Hamburger } from 'hamburger-react'
+// import { Squash as Hamburger } from 'hamburger-react'
 import { scrollTo } from 'lib/helpers'
 import { navLinks } from '../lib/links'
 import Link from 'next/link'
 import ThemeButton from './ThemeButton'
+import Hamburger from './Hamburger'
 
 interface Props {
   logo?: string
@@ -19,13 +20,6 @@ interface Props {
 export default function Header(props: Props) {
   const { state, setState } = props
   const { theme, setTheme } = useTheme()
-
-  function handleMobileNav() {
-    setState((prevState) => ({
-      ...prevState,
-      isMobileNavOpen: !prevState.isMobileNavOpen,
-    }))
-  }
 
   function handleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -47,16 +41,7 @@ export default function Header(props: Props) {
         />
       </button>
 
-      <button aria-label="Toggle Mobile Menu" className="lg:hidden">
-        <Hamburger
-          label="Show Menu"
-          rounded
-          color={theme === 'light' ? 'black' : 'white'}
-          size={24}
-          toggled={state.isMobileNavOpen}
-          toggle={handleMobileNav}
-        />
-      </button>
+      <Hamburger theme={theme} state={state} setState={setState} />
 
       <div className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
         {navLinks.map((link) => (
