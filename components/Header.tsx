@@ -6,6 +6,7 @@ import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
 import { scrollTo } from 'lib/helpers'
 import { navLinks } from '../lib/links'
+import Link from 'next/link'
 
 interface Props {
   logo?: string
@@ -87,6 +88,15 @@ export default function Header(props: Props) {
             </button>
           </li>
         ))}
+        <Link
+          href="mailto:soreilly424@gmail.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <a className="a transform transition-all duration-700 dark:hover:scale-110">
+            Get in touch
+          </a>
+        </Link>
       </ul>
       <ul
         id="themeButton"

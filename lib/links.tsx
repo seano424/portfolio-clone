@@ -7,14 +7,6 @@ const navLinks = [
     title: 'About',
     url: 'about',
   },
-  {
-    title: 'Contact',
-    url: 'contact',
-  },
-  {
-    title: 'Resume',
-    url: 'resume',
-  },
 ]
 
 const mobileNavLinks = [

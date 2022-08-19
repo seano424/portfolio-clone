@@ -75,5 +75,5 @@
 }
 
 .a {
-  @apply rounded-full px-5 py-4 text-xl font-bold text-neutral-700 transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-dark dark:hover:text-gray-100;
+  @apply rounded-full px-5 py-4 text-lg font-black text-dark transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-dark dark:hover:text-gray-100;
 }
