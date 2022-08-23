@@ -55,6 +55,7 @@ export default function Projects(props: Props) {
                 src={project.image}
                 alt={project.title}
                 layout="fill"
+                priority
                 sizes="(min-width: 75em) 50vw,
                 90vw"
               />
