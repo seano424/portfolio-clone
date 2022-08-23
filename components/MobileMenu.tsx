@@ -1,34 +1,21 @@
-import { Dispatch, SetStateAction } from 'react'
+import { useContext } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
 import { scrollTo } from 'lib/helpers'
+import { MobileContext } from 'contexts/MobileContext'
 import Link from 'next/link'
 
-interface Props {
-  state: {
-    isMobileNavOpen: boolean
-  }
-  setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
-}
-
-export default function Menu(props: Props) {
-  const { state, setState } = props
-
-  function handleMobileNav() {
-    setState((prevState) => ({
-      ...prevState,
-      isMobileNavOpen: !prevState.isMobileNavOpen,
-    }))
-  }
+export default function Menu() {
+  const { open, toggle } = useContext(MobileContext)
 
   const handleNavigation = async (url) => {
     scrollTo(url, 900, -80)
-    handleMobileNav()
+    toggle()
   }
 
   return (
     <AnimatePresence exitBeforeEnter>
-      {state.isMobileNavOpen && (
+      {open && (
         <m.div
           key="modal"
           initial={{ opacity: 0, x: -200 }}

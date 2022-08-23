@@ -1,22 +1,12 @@
-import { Dispatch, SetStateAction } from 'react'
+import { useContext } from 'react'
+import { MobileContext } from 'contexts/MobileContext'
+import { useTheme } from 'next-themes'
 import { Squash as Burger } from 'hamburger-react'
 
-interface Props {
-  theme: string
-  state: {
-    isMobileNavOpen: boolean
-  }
-  setState: Dispatch<SetStateAction<{ isMobileNavOpen: boolean }>>
-}
+const Hamburger = () => {
+  const { theme } = useTheme()
+  const { open, toggle } = useContext(MobileContext)
 
-const Hamburger = (props: Props) => {
-  const { theme, state, setState } = props
-  function handleMobileNav() {
-    setState((prevState) => ({
-      ...prevState,
-      isMobileNavOpen: !prevState.isMobileNavOpen,
-    }))
-  }
   return (
     <button aria-label="Toggle Mobile Menu" className="lg:hidden">
       <Burger
@@ -24,8 +14,8 @@ const Hamburger = (props: Props) => {
         rounded
         color={theme === 'light' ? 'black' : 'white'}
         size={24}
-        toggled={state.isMobileNavOpen}
-        toggle={handleMobileNav}
+        toggled={open}
+        toggle={toggle}
       />
     </button>
   )

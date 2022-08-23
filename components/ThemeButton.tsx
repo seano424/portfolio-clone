@@ -1,15 +1,12 @@
-import { Dispatch, SetStateAction } from 'react'
-
+import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
 
-interface Props {
-  handleTheme: Dispatch<SetStateAction<{ theme: string }>>
-  theme: string
-}
-
-const ThemeButton = (props: Props) => {
-  const { handleTheme, theme } = props
+const ThemeButton = () => {
+  const { theme, setTheme } = useTheme()
+  function handleTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
   return (
     <button aria-label="Button to change color theme" onClick={handleTheme}>
       <AnimatePresence initial={false}>
