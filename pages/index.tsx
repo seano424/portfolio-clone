@@ -1,11 +1,11 @@
-import Hero from '@/components/Hero'
+// import Hero from '@/components/Hero'
 import AboutMe from '@/components/AboutMe'
 import Projects from '@/components/Projects'
 
 const Home = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <Projects />
       <AboutMe />
     </>
