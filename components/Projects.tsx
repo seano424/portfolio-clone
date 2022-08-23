@@ -55,6 +55,8 @@ export default function Projects(props: Props) {
                 src={project.image}
                 alt={project.title}
                 layout="fill"
+                sizes="(min-width: 75em) 50vw,
+                90vw"
               />
             </div>
           </article>
