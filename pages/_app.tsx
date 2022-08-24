@@ -4,17 +4,20 @@ import { LazyMotion, domAnimation } from 'framer-motion'
 import Layout from '@/components/Layout'
 import MobileContextProvider from 'contexts/MobileContext'
 import '../styles/globals.css'
+import { RecoilRoot } from 'recoil'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LazyMotion features={domAnimation}>
-      <ThemeProvider attribute="class">
-        <MobileContextProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </MobileContextProvider>
-      </ThemeProvider>
+      <RecoilRoot>
+        <ThemeProvider attribute="class">
+          <MobileContextProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </MobileContextProvider>
+        </ThemeProvider>
+      </RecoilRoot>
     </LazyMotion>
   )
 }
