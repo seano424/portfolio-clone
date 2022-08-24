@@ -11,18 +11,21 @@ export default function Header() {
       <MenuIcon />
       <section className="hidden items-center justify-center gap-12 lg:flex">
         <button
+          aria-label="Scroll To Home Button"
           className="a transform transition-all duration-700 dark:hover:scale-110"
           onClick={() => scrollTo('home', null, -80)}
         >
           Home
         </button>
         <button
+          aria-label="Scroll To Projects Button"
           className="a transform transition-all duration-700 dark:hover:scale-110"
           onClick={() => scrollTo('projects')}
         >
           Projects
         </button>
         <button
+          aria-label="Scroll To About Button"
           className="a transform transition-all duration-700 dark:hover:scale-110"
           onClick={() => scrollTo('about')}
         >

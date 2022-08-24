@@ -50,12 +50,14 @@ export default function Hero() {
         </div>
         <div className="flex justify-center  gap-4 lg:flex-row lg:gap-10">
           <button
+            aria-label="Scroll To About Button"
             onClick={() => scrollTo('about', 1600, -40)}
             className="button bg-white text-dark dark:bg-light"
           >
             More About Me
           </button>
           <button
+            aria-label="Scroll To Projects Button"
             onClick={() => scrollTo('projects', null, -70)}
             className="button"
           >
