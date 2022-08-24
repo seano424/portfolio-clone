@@ -34,7 +34,7 @@ export default function Menu() {
               <button
                 key={link.title}
                 aria-label={`Scroll Button To Section ${link.title}`}
-                className={`text-left text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-dark dark:hover:text-light sm:text-6xl md:text-7xl
+                className={`text-left text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light sm:text-6xl md:text-7xl
                 ${i === 0 && 'duration-200'}
                 ${i === 1 && 'duration-300'}
                 ${i === 2 && 'duration-500'}
@@ -50,7 +50,7 @@ export default function Menu() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <a className="text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-dark dark:hover:text-light sm:text-6xl md:text-7xl">
+              <a className="text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light sm:text-6xl md:text-7xl">
                 Contact
               </a>
             </Link>
