@@ -21,13 +21,13 @@ export default function Menu() {
           animate={{ opacity: 1, x: 0 }}
           exit={{
             opacity: 0,
-            x: -400,
+            x: -600,
             transition: {
               duration: 0.6,
               ease: [0.83, 0, 0.17, 1],
             },
           }}
-          className="fixed top-20 z-50 flex min-h-screen w-10/12 items-start justify-center bg-light/90 filter backdrop-blur-sm dark:bg-dark/90 md:w-1/2 lg:hidden"
+          className="fixed top-20 z-20 flex min-h-screen w-10/12 items-start justify-center bg-light/90 py-4 shadow-2xl filter backdrop-blur-sm dark:bg-dark/90 md:w-2/3 lg:hidden"
         >
           <ul className="px-base mt-10 grid gap-8 sm:gap-16">
             {mobileNavLinks.map((link, i) => (

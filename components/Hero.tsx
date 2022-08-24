@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <Element name="home">
       <section className="px-base flex flex-col items-center justify-center gap-8 pt-5 pb-32 text-center">
-        <div className="relative h-64 w-64 md:h-80 md:w-80">
+        <div className="relative h-64 w-64 rounded-full shadow-2xl md:h-80 md:w-80">
           <Image
             className="rounded-full object-cover"
             src="/images/mebw.webp"
