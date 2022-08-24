@@ -11,11 +11,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res
-    .status(200)
-    .json({
-      name: "Sean O'Reilly",
-      title: 'Front-end Developer',
-      favoriteActionActivity: 'Scuba Diving 🤿 🐠',
-    })
+  res.status(200).json({
+    name: "Sean O'Reilly",
+    title: 'Front-end Developer',
+    favoriteActionActivity: 'Scuba Diving 🤿 🐠',
+  })
 }
