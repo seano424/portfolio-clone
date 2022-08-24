@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { MobileContext } from 'contexts/MobileContext'
 import { useTheme } from 'next-themes'
-import { Squash as Burger } from 'hamburger-react'
+import { Squash } from 'hamburger-react'
 
 const Hamburger = () => {
   const { theme } = useTheme()
@@ -14,7 +14,7 @@ const Hamburger = () => {
 
   return (
     <button aria-label="Toggle Mobile Menu" className="lg:hidden">
-      <Burger
+      <Squash
         label="Show Menu"
         rounded
         color={color}
