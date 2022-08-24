@@ -3,12 +3,8 @@ import Link from 'next/link'
 import GitHub from '../public/icons/GitHub'
 import { projects } from 'lib/projectData'
 import { Element } from 'react-scroll'
-interface Props {
-  heading?: string
-}
 
-export default function Projects(props: Props) {
-  const { heading = 'Featured Projects' } = props
+export default function Projects() {
   return (
     <Element name="projects">
       <section className="px-base py-base bg-gray-100 dark:bg-gray-900">
