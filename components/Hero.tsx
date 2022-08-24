@@ -7,7 +7,7 @@ import GitHub from '@/icons/GitHub'
 import LinkedIn from '@/icons/LinkedIn'
 import Twitter from '@/icons/Twitter'
 
-export default function AboutMe() {
+export default function Hero() {
   return (
     <Element name="home">
       <section className="px-base flex flex-col items-center justify-center gap-8 pt-5 pb-32 text-center">
