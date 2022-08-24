@@ -1,21 +1,20 @@
-import { useContext } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
 import { scrollTo } from 'lib/helpers'
-import { MobileContext } from 'contexts/MobileContext'
 import Link from 'next/link'
+import useShowMobileNav from 'hooks/useShowMobileNav'
 
 export default function Menu() {
-  const { open, toggle } = useContext(MobileContext)
+  const [showMobileNav, setShowMobileNav] = useShowMobileNav()
 
   const handleNavigation = async (url) => {
     scrollTo(url, 900, -80)
-    toggle()
+    setShowMobileNav((prev) => !prev)
   }
 
   return (
     <AnimatePresence exitBeforeEnter>
-      {open && (
+      {showMobileNav && (
         <m.div
           key="modal"
           initial={{ opacity: 0, x: -200 }}

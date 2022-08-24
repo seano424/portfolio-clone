@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from 'react'
-import { MobileContext } from 'contexts/MobileContext'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Squash } from 'hamburger-react'
+import useShowMobileNav from 'hooks/useShowMobileNav'
 
 const Hamburger = () => {
   const { theme } = useTheme()
   const [color, setColor] = useState('white')
-  const { open, toggle } = useContext(MobileContext)
+  const [showMobileNav, setShowMobileNav] = useShowMobileNav()
 
   useEffect(() => {
     setColor(theme === 'dark' ? 'white' : 'black')
@@ -19,8 +19,8 @@ const Hamburger = () => {
         rounded
         color={color}
         size={24}
-        toggled={open}
-        toggle={toggle}
+        toggled={showMobileNav}
+        toggle={setShowMobileNav}
       />
     </button>
   )
