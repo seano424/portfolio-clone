@@ -3,7 +3,7 @@ import { socialLinks, navLinks } from 'lib/links'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import useScrollTo from 'hooks/useScrollTo'
+import scrollTo from 'lib/scrollTo'
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex gap-10 text-center">
         <button
           className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
-          onClick={() => useScrollTo('home', 1600, -80)}
+          onClick={() => scrollTo('home', 1600, -80)}
         >
           Back To Top
         </button>
@@ -19,7 +19,7 @@ export default function Footer() {
           <button
             key={link.title}
             className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
-            onClick={() => useScrollTo(link.url, null, -80)}
+            onClick={() => scrollTo(link.url, null, -80)}
           >
             {link.title}
           </button>

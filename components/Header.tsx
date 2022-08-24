@@ -2,7 +2,7 @@ import Link from 'next/link'
 import ThemeButton from './ThemeButton'
 import MenuIcon from './MenuIcon'
 import Avatar from './Avatar'
-import useScrollTo from 'hooks/useScrollTo'
+import scrollTo from 'lib/scrollTo'
 
 export default function Header() {
   return (
@@ -12,19 +12,19 @@ export default function Header() {
       <section className="hidden items-center justify-center gap-12 lg:flex">
         <button
           className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => useScrollTo('home', null, -80)}
+          onClick={() => scrollTo('home', null, -80)}
         >
           Home
         </button>
         <button
           className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => useScrollTo('projects')}
+          onClick={() => scrollTo('projects')}
         >
           Projects
         </button>
         <button
           className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => useScrollTo('about')}
+          onClick={() => scrollTo('about')}
         >
           About
         </button>

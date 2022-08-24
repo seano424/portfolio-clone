@@ -5,7 +5,7 @@ import { socialLinks } from 'lib/links'
 import GitHub from '@/icons/GitHub'
 import LinkedIn from '@/icons/LinkedIn'
 import Twitter from '@/icons/Twitter'
-import useScrollTo from 'hooks/useScrollTo'
+import scrollTo from 'lib/scrollTo'
 
 export default function Hero() {
   return (
@@ -50,13 +50,13 @@ export default function Hero() {
         </div>
         <div className="flex justify-center  gap-4 lg:flex-row lg:gap-10">
           <button
-            onClick={() => useScrollTo('about', 1600, -40)}
+            onClick={() => scrollTo('about', 1600, -40)}
             className="button bg-white text-dark dark:bg-light"
           >
             More About Me
           </button>
           <button
-            onClick={() => useScrollTo('projects', null, -70)}
+            onClick={() => scrollTo('projects', null, -70)}
             className="button"
           >
             See my work

@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
 import useShowMobileNav from 'hooks/useShowMobileNav'
-import useScrollTo from 'hooks/useScrollTo'
+import scrollTo from 'lib/scrollTo'
 
 export default function Menu() {
   const [showMobileNav, setShowMobileNav] = useShowMobileNav()
 
   const handleNavigation = async (url) => {
-    useScrollTo(url, 900, -80)
+    scrollTo(url, 900, -80)
     setShowMobileNav((prev) => !prev)
   }
 

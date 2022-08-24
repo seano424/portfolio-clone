@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import useScrollTo from 'hooks/useScrollTo'
+import scrollTo from 'lib/scrollTo'
 
 const Avatar = () => {
   return (
     <button
-      onClick={() => useScrollTo('home', null, -80)}
+      onClick={() => scrollTo('home', null, -80)}
       className="relative hidden h-12 w-12 cursor-pointer transition-all duration-700 ease-linear hover:text-primary lg:flex"
     >
       <Image
