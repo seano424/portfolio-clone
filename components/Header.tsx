@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import ThemeButton from './ThemeButton'
-import Hamburger from './Hamburger'
+import MenuIcon from './MenuIcon'
 import Avatar from './Avatar'
 import useScrollTo from 'hooks/useScrollTo'
 
@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
       <Avatar />
-      <Hamburger />
+      <MenuIcon />
       <section className="hidden items-center justify-center gap-12 lg:flex">
         <button
           className="a transform transition-all duration-700 dark:hover:scale-110"
