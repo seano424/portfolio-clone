@@ -1,11 +1,15 @@
+import { useRef } from 'react'
+import Link from 'next/link'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
 import { scrollTo } from 'lib/helpers'
-import Link from 'next/link'
 import useShowMobileNav from 'hooks/useShowMobileNav'
+import useOnClickOutside from 'hooks/useOnClickOutside'
 
 export default function Menu() {
   const [showMobileNav, setShowMobileNav] = useShowMobileNav()
+  const ref = useRef()
+  useOnClickOutside(ref, () => setShowMobileNav((prev) => !prev))
 
   const handleNavigation = async (url) => {
     scrollTo(url, 900, -80)
@@ -16,7 +20,8 @@ export default function Menu() {
     <AnimatePresence exitBeforeEnter>
       {showMobileNav && (
         <m.div
-          key="modal"
+          ref={ref}
+          key="mobileMenu"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{
