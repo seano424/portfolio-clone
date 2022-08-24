@@ -8,16 +8,25 @@ import { scrollTo } from 'lib/helpers'
 export default function Footer() {
   return (
     <footer className="px-base py-base flex flex-col items-center justify-center gap-8 bg-light dark:bg-dark">
-      <div className="flex justify-center gap-5 lg:gap-10">
+      <div className="flex gap-10 text-center">
         {navLinks.map((link) => (
           <button
             key={link.title}
-            className="text-lg text-dark hover:text-gray-600 dark:text-light lg:text-xl"
+            className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
             onClick={() => scrollTo(link.url)}
           >
             {link.title}
           </button>
         ))}
+        <Link
+          href="mailto:soreilly424@gmail.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <a className="transform text-lg text-dark transition-all duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl">
+            Get in touch
+          </a>
+        </Link>
       </div>
       <div className="flex justify-center gap-8">
         {socialLinks.map((link) => (
