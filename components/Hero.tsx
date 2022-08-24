@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Element } from 'react-scroll'
 import { socialLinks } from 'lib/links'
-import { scrollTo } from 'lib/helpers'
 import GitHub from '@/icons/GitHub'
 import LinkedIn from '@/icons/LinkedIn'
 import Twitter from '@/icons/Twitter'
+import useScrollTo from 'hooks/useScrollTo'
 
 export default function Hero() {
   return (
@@ -50,13 +50,13 @@ export default function Hero() {
         </div>
         <div className="flex justify-center  gap-4 lg:flex-row lg:gap-10">
           <button
-            onClick={() => scrollTo('about', 1600, -40)}
+            onClick={() => useScrollTo('about', 1600, -40)}
             className="button bg-white text-dark dark:bg-light"
           >
             More About Me
           </button>
           <button
-            onClick={() => scrollTo('projects', null, -70)}
+            onClick={() => useScrollTo('projects', null, -70)}
             className="button"
           >
             See my work

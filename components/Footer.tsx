@@ -3,17 +3,23 @@ import { socialLinks, navLinks } from 'lib/links'
 import GitHub from '@/icons/GitHub'
 import Twitter from '@/icons/Twitter'
 import LinkedIn from '@/icons/LinkedIn'
-import { scrollTo } from 'lib/helpers'
+import useScrollTo from 'hooks/useScrollTo'
 
 export default function Footer() {
   return (
     <footer className="px-base py-base flex flex-col items-center justify-center gap-8 bg-light dark:bg-dark">
       <div className="flex gap-10 text-center">
+        <button
+          className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
+          onClick={() => useScrollTo('home', 1600, -80)}
+        >
+          Back To Top
+        </button>
         {navLinks.map((link) => (
           <button
             key={link.title}
             className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
-            onClick={() => scrollTo(link.url)}
+            onClick={() => useScrollTo(link.url, null, -80)}
           >
             {link.title}
           </button>

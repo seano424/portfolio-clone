@@ -2,9 +2,9 @@ import { useRef } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, m } from 'framer-motion'
 import { mobileNavLinks } from 'lib/links'
-import { scrollTo } from 'lib/helpers'
 import useShowMobileNav from 'hooks/useShowMobileNav'
 import useOnClickOutside from 'hooks/useOnClickOutside'
+import useScrollTo from 'hooks/useScrollTo'
 
 export default function Menu() {
   const [showMobileNav, setShowMobileNav] = useShowMobileNav()
@@ -12,7 +12,7 @@ export default function Menu() {
   useOnClickOutside(ref, () => setShowMobileNav((prev) => !prev))
 
   const handleNavigation = async (url) => {
-    scrollTo(url, 900, -80)
+    useScrollTo(url, 900, -80)
     setShowMobileNav((prev) => !prev)
   }
 

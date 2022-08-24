@@ -1,6 +1,6 @@
 import { scroller } from 'react-scroll'
 
-export const scrollTo = (name, duration = 1000, offset = 20) => {
+const useScrollTo = (name, duration = 1000, offset = 20) => {
   scroller.scrollTo(name, {
     duration: duration,
     delay: 100,
@@ -8,3 +8,5 @@ export const scrollTo = (name, duration = 1000, offset = 20) => {
     offset: offset,
   })
 }
+
+export default useScrollTo
