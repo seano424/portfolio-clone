@@ -8,7 +8,7 @@ import scrollTo from 'lib/scrollTo'
 export default function Footer() {
   return (
     <footer className="px-base py-base flex flex-col items-center justify-center gap-8 bg-light dark:bg-dark">
-      <div className="flex gap-10 text-center">
+      <div className="flex flex-wrap justify-center gap-5 text-center md:gap-10">
         <button
           aria-label="Scroll To Home Button"
           className="transform text-lg text-dark duration-700 hover:text-gray-600 dark:text-light dark:hover:scale-110 lg:text-xl"
