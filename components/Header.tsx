@@ -20,14 +20,14 @@ export default function Header() {
         <button
           aria-label="Scroll To Projects Button"
           className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => scrollTo('projects')}
+          onClick={() => scrollTo('projects', null, -80)}
         >
           Projects
         </button>
         <button
           aria-label="Scroll To About Button"
           className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => scrollTo('about')}
+          onClick={() => scrollTo('about', null, -80)}
         >
           About
         </button>

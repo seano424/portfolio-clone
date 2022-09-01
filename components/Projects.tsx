@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import GitHub from '../public/icons/GitHub'
-import { projects } from 'lib/projectData'
+import { projects } from 'lib/portfolio'
 import { Element } from 'react-scroll'
 
 export default function Projects() {
@@ -18,29 +18,29 @@ export default function Projects() {
         {projects.map((project, i) => (
           <article
             key={i}
-            className="mb-10 grid grid-cols-1 md:mb-40 md:grid-cols-8 md:gap-20 xl:mb-20 xl:p-10"
+            className="mb-10 grid grid-cols-1 gap-5 lg:mb-40 lg:grid-cols-8 lg:gap-20 xl:mb-20 xl:p-10"
           >
             {/* Content */}
-            <div className="flex flex-col gap-4 text-center md:col-span-4 md:text-left xl:col-span-3">
+            <div className="flex flex-col gap-4 text-center lg:col-span-4 lg:text-left xl:col-span-3">
               <h3 className="h3 font-extrabold uppercase tracking-tighter text-secondary dark:text-white">
                 {project.title}
               </h3>
-              <div className="hidden flex-col gap-4 md:flex">
+              <div className="flex flex-col gap-4">
                 <p className="p">{project.description}</p>
               </div>
-              <div className="hidden items-center justify-center gap-4 md:flex md:justify-start">
+              <div className="hidden items-center justify-center gap-4 lg:flex lg:justify-start">
                 <Link href={project.siteUrl}>
-                  <a className="button text-sm dark:bg-light dark:text-black md:text-xl">
+                  <a className="button text-sm dark:bg-light dark:text-black lg:text-xl">
                     Visit Site
                   </a>
                 </Link>
                 <Link href={projects[0].githubUrl}>
                   <a className="flex items-center justify-center rounded-full border-4 p-3">
-                    <GitHub className="h-5 w-5 font-black text-emerald-500 transition-all duration-300 ease-linear hover:scale-105 hover:text-primary dark:text-green-200 dark:hover:text-primary md:h-8 md:w-8" />
+                    <GitHub className="h-5 w-5 font-black text-emerald-500 transition-all duration-300 ease-linear hover:scale-105 hover:text-primary dark:text-green-200 dark:hover:text-primary lg:h-8 lg:w-8" />
                   </a>
                 </Link>
               </div>
-              <ul className="flex flex-wrap justify-center gap-4 md:justify-start">
+              <ul className="flex flex-wrap justify-center gap-4 lg:justify-start">
                 {project.tech.map((tech, i) => (
                   <li key={i}>{tech}</li>
                 ))}
@@ -48,9 +48,9 @@ export default function Projects() {
             </div>
 
             {/* Image */}
-            <div className="relative w-full md:col-span-4 xl:col-span-5">
+            <div className="h-[320px container relative w-full md:h-[450px] lg:col-span-4 lg:h-auto xl:col-span-5">
               <Image
-                className="object-cover object-top"
+                className="rounded-lg object-cover object-top"
                 src={project.image}
                 alt={project.title}
                 layout="fill"

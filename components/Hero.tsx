@@ -10,7 +10,7 @@ import scrollTo from 'lib/scrollTo'
 export default function Hero() {
   return (
     <Element name="home">
-      <section className="px-base flex flex-col items-center justify-center gap-8 pt-5 pb-32 text-center">
+      <section className="px-base flex flex-col items-center justify-center pb-20 text-center sm:gap-8 lg:pt-5">
         <div className="relative h-64 w-64 rounded-full shadow-2xl md:h-80 md:w-80">
           <Image
             className="rounded-full object-cover"
@@ -22,7 +22,7 @@ export default function Hero() {
             priority
           />
         </div>
-        <h1 className="h1 min-h-[200px] md:min-h-[150px] lg:min-h-[180px] 2xl:min-h-[225px]">
+        <h1 className="h1 my-5">
           Hi! 👋 My name is Sean. I build websites with modern tools &
           technologies!
         </h1>
@@ -48,7 +48,7 @@ export default function Hero() {
             </Link>
           ))}
         </div>
-        <div className="flex justify-center  gap-4 lg:flex-row lg:gap-10">
+        <div className="mt-5 flex flex-col justify-center gap-4 sm:flex-row lg:gap-10">
           <button
             aria-label="Scroll To About Button"
             onClick={() => scrollTo('about', 1600, -40)}
