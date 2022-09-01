@@ -34,7 +34,7 @@ export default function Layout({ children }) {
       <Header />
       <MobileMenu />
       {mounted && <Cursor />}
-      <main className="relative top-20">
+      <main>
         <div className="h-full w-full flex-1">{children}</div>
         <Footer />
       </main>

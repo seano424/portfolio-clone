@@ -30,12 +30,18 @@ export default function Projects() {
               </div>
               <div className="hidden items-center justify-center gap-4 lg:flex lg:justify-start">
                 <Link href={project.siteUrl}>
-                  <a className="button text-sm dark:bg-light dark:text-black lg:text-xl">
+                  <a
+                    target="_blank"
+                    className="button text-sm dark:bg-light dark:text-black lg:text-xl"
+                  >
                     Visit Site
                   </a>
                 </Link>
                 <Link href={projects[0].githubUrl}>
-                  <a className="flex items-center justify-center rounded-full border-4 p-3">
+                  <a
+                    target="_blank"
+                    className="flex items-center justify-center rounded-full border-4 p-3"
+                  >
                     <GitHub className="h-5 w-5 font-black text-emerald-500 transition-all duration-300 ease-linear hover:scale-105 hover:text-primary dark:text-green-200 dark:hover:text-primary lg:h-8 lg:w-8" />
                   </a>
                 </Link>
@@ -48,7 +54,7 @@ export default function Projects() {
             </div>
 
             {/* Image */}
-            <div className="h-[320px container relative w-full md:h-[450px] lg:col-span-4 lg:h-auto xl:col-span-5">
+            <div className="container relative h-[320px] w-full md:h-[450px] lg:col-span-4 lg:h-auto xl:col-span-5">
               <Image
                 className="rounded-lg object-cover object-top"
                 src={project.image}
