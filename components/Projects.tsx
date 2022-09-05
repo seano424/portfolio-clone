@@ -37,7 +37,7 @@ export default function Projects() {
                     Visit Site
                   </a>
                 </Link>
-                <Link href={projects[0].githubUrl}>
+                <Link href={project.githubUrl}>
                   <a
                     target="_blank"
                     rel="noreferrer"
