@@ -31,7 +31,7 @@ export default function AboutMe() {
             programming languages, as well as dabbling in photography. You can
             find me on{' '}
             <Link href="/">
-              <a className="text-secondary transition-all duration-300 hover:underline">
+              <a className="text-blue-700 transition-all duration-300 hover:underline">
                 Twitter
               </a>
             </Link>{' '}
