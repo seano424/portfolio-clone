@@ -41,6 +41,7 @@ export default function Projects() {
                     target="_blank"
                     className="flex items-center justify-center rounded-full border-4 p-3"
                   >
+                    <span className="sr-only">GitHub</span>
                     <GitHub className="h-5 w-5 font-black text-emerald-500 transition-all duration-300 ease-linear hover:scale-105 hover:text-primary dark:text-green-200 dark:hover:text-primary lg:h-8 lg:w-8" />
                   </a>
                 </Link>
