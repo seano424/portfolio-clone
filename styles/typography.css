@@ -63,11 +63,11 @@
   font-family: 'Open Sans', Open-sans-fallback, sans-serif;
 }
 .h2 {
-  @apply text-5xl font-extrabold uppercase tracking-tighter md:text-7xl lg:text-8xl;
+  @apply text-5xl font-extrabold uppercase tracking-tighter md:text-7xl;
 }
 
 .h3 {
-  @apply text-2xl font-extrabold tracking-tighter md:text-4xl lg:text-6xl;
+  @apply text-2xl font-extrabold tracking-tighter md:text-4xl;
 }
 .p {
   @apply sm:text-lg;

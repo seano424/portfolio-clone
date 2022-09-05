@@ -54,14 +54,14 @@ export default function Hero() {
             <button
               aria-label="Scroll To About Button"
               onClick={() => scrollTo('about', 1600, -40)}
-              className="button mx-auto w-max bg-white text-dark dark:bg-light"
+              className="button mx-auto w-max bg-white text-dark dark:bg-light md:mx-0"
             >
               More About Me
             </button>
             <button
               aria-label="Scroll To Projects Button"
               onClick={() => scrollTo('projects', null, -70)}
-              className="button mx-auto w-max"
+              className="button mx-auto w-max md:mx-0"
             >
               See my work
             </button>

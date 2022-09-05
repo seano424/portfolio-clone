@@ -9,9 +9,8 @@ export default function Projects() {
     <Element name="projects">
       <section className="px-base py-base bg-gray-100 dark:bg-gray-900">
         <h2 className="h2 mb-4 text-center sm:mb-16">
-          My{' '}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Featured{' '}
+            Recent{' '}
           </span>
           Projects
         </h2>
@@ -21,7 +20,7 @@ export default function Projects() {
             className="mb-10 grid grid-cols-1 gap-5 lg:mb-40 lg:grid-cols-8 lg:gap-20 xl:mb-20 xl:p-10"
           >
             {/* Content */}
-            <div className="flex flex-col gap-4 text-center lg:col-span-4 lg:text-left xl:col-span-3">
+            <div className="flex flex-col justify-center gap-4 text-center lg:col-span-4 lg:text-left xl:col-span-3">
               <h3 className="h3 font-extrabold uppercase tracking-tighter text-secondary dark:text-white">
                 {project.title}
               </h3>
@@ -54,7 +53,7 @@ export default function Projects() {
             </div>
 
             {/* Image */}
-            <div className="container relative h-[320px] w-full md:h-[450px] lg:col-span-4 lg:h-auto xl:col-span-5">
+            <div className="container relative h-[320px] w-full rounded-lg lg:col-span-4 xl:col-span-5 xl:h-[450px]">
               <Image
                 className="rounded-lg object-cover object-top"
                 src={project.image}

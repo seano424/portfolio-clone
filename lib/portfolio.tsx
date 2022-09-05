@@ -17,4 +17,12 @@ export const projects = [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, expedita?Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
+  {
+    image: '/images/portfolio.jpg',
+    githubUrl: 'https://github.com/seano424/portfolio-clone',
+    siteUrl: 'https://portfolio-clone-typescript-v2.vercel.app/',
+    title: 'My portfolio site',
+    tech: ['React', 'Typescript', 'NextJS', 'TailwindCSS', 'Recoil JS'],
+    description: 'My personal portfolio to show off my recent work!',
+  },
 ]
