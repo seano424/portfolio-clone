@@ -31,6 +31,7 @@ export default function Projects() {
                 <Link href={project.siteUrl}>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="button text-sm dark:bg-light dark:text-black lg:text-xl"
                   >
                     Visit Site
@@ -39,6 +40,7 @@ export default function Projects() {
                 <Link href={projects[0].githubUrl}>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     className="flex items-center justify-center rounded-full border-4 p-3"
                   >
                     <span className="sr-only">GitHub</span>
