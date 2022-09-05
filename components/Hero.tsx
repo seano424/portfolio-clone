@@ -19,7 +19,7 @@ export default function Hero() {
             alt="Hero Image"
             layout="fill"
             sizes="(min-width: 75em) 20vw,
-            90vw"
+            20vw"
             priority
           />
         </div>
