@@ -39,12 +39,7 @@ export default function Footer() {
       <div className="flex justify-center gap-8">
         {socialLinks.map((link) => (
           <Link href={link.href} key={link.name}>
-            <a
-              className={link.classes}
-              aria-label={link.name}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className={link.classes} target="_blank" rel="noreferrer">
               {link.icon === 'GitHub' && (
                 <GitHub className="h-6 w-6 lg:h-8 lg:w-8" />
               )}
@@ -54,6 +49,7 @@ export default function Footer() {
               {link.icon === 'LinkedIn' && (
                 <LinkedIn className="h-6 w-6 lg:h-8 lg:w-8" />
               )}
+              <span className="sr-only">{link.name}</span>
             </a>
           </Link>
         ))}
