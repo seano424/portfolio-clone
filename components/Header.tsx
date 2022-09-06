@@ -4,33 +4,24 @@ import MenuIcon from './MenuIcon'
 import Avatar from './Avatar'
 import scrollTo from 'lib/scrollTo'
 
+const navigation = ['home', 'projects', 'about']
+
 export default function Header() {
   return (
     <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
       <Avatar />
       <MenuIcon />
       <section className="hidden items-center justify-center gap-12 lg:flex">
-        <button
-          aria-label="Scroll To Home Button"
-          className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => scrollTo('home', null, -80)}
-        >
-          Home
-        </button>
-        <button
-          aria-label="Scroll To Projects Button"
-          className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => scrollTo('projects', null, -80)}
-        >
-          Projects
-        </button>
-        <button
-          aria-label="Scroll To About Button"
-          className="a transform transition-all duration-700 dark:hover:scale-110"
-          onClick={() => scrollTo('about', null, -80)}
-        >
-          About
-        </button>
+        {navigation.map((location) => (
+          <button
+            key={location}
+            aria-label={`Scroll To ${location} Button`}
+            className="a transform capitalize transition-all duration-700 dark:hover:scale-110"
+            onClick={() => scrollTo(location, null, -80)}
+          >
+            {location}
+          </button>
+        ))}
         <Link
           href="mailto:soreilly424@gmail.com"
           target="_blank"
