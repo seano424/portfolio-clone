@@ -21,7 +21,7 @@ export const projects = [
     image: '/images/portfolio.jpg',
     githubUrl: 'https://github.com/seano424/portfolio-clone',
     siteUrl: 'https://portfolio-clone-typescript-v2.vercel.app/',
-    title: 'My portfolio site',
+    title: 'portfolio site',
     tech: ['React', 'Typescript', 'NextJS', 'TailwindCSS', 'Recoil JS'],
     description: 'My personal portfolio to show off my recent work!',
   },
