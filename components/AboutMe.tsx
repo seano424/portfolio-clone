@@ -4,10 +4,10 @@ import { Element } from 'react-scroll'
 export default function AboutMe() {
   return (
     <Element name="about">
-      <section className="py-base px-base">
-        <div className="mb-8">
-          <p className="h3 text-center text-secondary">About Me</p>
-        </div>
+      <section className="py-base px-base flex flex-col gap-5">
+        <p className="h3 text-center font-extrabold tracking-tighter text-secondary dark:text-cyan-300">
+          About Me
+        </p>
         <div className="mx-auto flex max-w-3xl flex-col gap-6 text-xl leading-[40px] text-slate-800 dark:text-light/90 lg:text-xl lg:leading-loose">
           <p>
             I'm Sean, a passionate front-end developer specializing in React and

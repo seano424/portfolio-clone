@@ -67,7 +67,7 @@
 }
 
 .h3 {
-  @apply text-2xl font-extrabold tracking-tighter md:text-4xl;
+  @apply text-4xl font-extrabold tracking-tighter;
 }
 .p {
   @apply sm:text-lg;
