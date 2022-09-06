@@ -8,7 +8,7 @@ const navigation = ['home', 'projects', 'about']
 
 export default function Header() {
   return (
-    <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
+    <nav className="px-base fixed z-50 flex h-20 w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark-secondary/90">
       <Avatar />
       <MenuIcon />
       <section className="hidden items-center justify-center gap-12 lg:flex">
