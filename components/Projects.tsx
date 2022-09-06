@@ -20,10 +20,10 @@ export default function Projects() {
         {projects.map((project, i) => (
           <article
             key={i}
-            className="mb-10 grid grid-cols-1 gap-5 lg:mb-40 lg:grid-cols-8 lg:gap-20 xl:mb-20 xl:p-10"
+            className="mb-40 grid grid-cols-1 gap-5 lg:grid-cols-8 lg:gap-20 xl:mb-20 xl:p-10"
           >
             {/* Content */}
-            <div className="flex flex-col justify-center gap-4 text-center lg:col-span-4 lg:text-left xl:col-span-3">
+            <div className="container flex flex-col justify-center gap-4 text-center lg:col-span-4 lg:text-left xl:col-span-3">
               <h3 className="h3 font-extrabold uppercase tracking-tighter text-secondary dark:text-white">
                 {project.title}
               </h3>
@@ -64,7 +64,7 @@ export default function Projects() {
             </div>
 
             {/* Image */}
-            <div className="container relative h-[320px] w-full rounded-lg lg:col-span-4 xl:col-span-5 xl:h-[450px]">
+            <div className="container relative h-[320px] w-full rounded-lg md:h-[450px] lg:col-span-4 lg:h-[350px] xl:col-span-5 xl:h-[450px]">
               <Image
                 className="rounded-lg object-cover object-top"
                 src={project.image}
