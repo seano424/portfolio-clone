@@ -29,12 +29,12 @@ export default function Menu() {
           }}
           className="fixed top-20 z-20 flex min-h-screen w-10/12 items-start justify-center bg-light/90 py-4 shadow-2xl filter backdrop-blur-sm dark:bg-dark/90 md:w-2/3 lg:hidden"
         >
-          <div className="px-base mt-10 grid gap-8 sm:gap-16">
+          <div className="px-base grid gap-8 sm:gap-16">
             {mobileNavLinks.map((link, i) => (
               <button
                 key={link.title}
                 aria-label={`Scroll Button To Section ${link.title}`}
-                className={`text-left text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light sm:text-6xl md:text-7xl
+                className={`p-1 text-left  text-6xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light md:text-7xl
                 ${i === 0 && 'duration-200'}
                 ${i === 1 && 'duration-300'}
                 ${i === 2 && 'duration-500'}
@@ -50,7 +50,7 @@ export default function Menu() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <a className="text-4xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light sm:text-6xl md:text-7xl">
+              <a className="text-6xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light md:text-7xl">
                 Contact
               </a>
             </Link>
