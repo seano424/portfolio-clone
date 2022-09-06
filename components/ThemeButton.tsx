@@ -18,12 +18,11 @@ const ThemeButton = () => {
     )
   }, [theme])
 
-  const handleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
-
   return (
-    <button aria-label="Button to change color theme" onClick={handleTheme}>
+    <button
+      aria-label="Button to change color theme"
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    >
       <AnimatePresence exitBeforeEnter initial={false}>
         <div className="flex ">
           <m.div
