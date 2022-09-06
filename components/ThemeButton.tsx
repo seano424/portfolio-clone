@@ -19,19 +19,21 @@ const ThemeButton = () => {
   }, [theme])
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
-      <m.button
-        aria-label="Button to change color theme"
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-        key={`theme-${theme}`}
-        variants={themeVariants}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-      >
-        {icon}
-      </m.button>
-    </AnimatePresence>
+    <div id="themeButton">
+      <AnimatePresence exitBeforeEnter initial={false}>
+        <m.button
+          aria-label="Button to change color theme"
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          key={`theme-${theme}`}
+          variants={themeVariants}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
+          {icon}
+        </m.button>
+      </AnimatePresence>
+    </div>
   )
 }
 

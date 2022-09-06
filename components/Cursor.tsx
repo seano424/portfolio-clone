@@ -64,7 +64,7 @@ export default function Cursor() {
   if (typeof navigator !== 'undefined' && isMobile()) return null
   return (
     <div
-      className={`ease-in-outease-in-out pointer-events-none fixed z-50 h-10 w-10 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[1px] border-dark mix-blend-color-dodge transition-opacity duration-300 dark:hidden dark:border-2 dark:border-opacity-0 dark:bg-opacity-0 dark:mix-blend-overlay
+      className={`ease-in-outease-in-out pointer-events-none fixed z-50 h-10 w-10 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[1px] border-dark mix-blend-color-dodge transition-opacity duration-300 dark:border-opacity-0 dark:bg-dark dark:bg-opacity-100 dark:mix-blend-overlay
         ${hidden ? 'opacity-0' : 'opacity-100'}
         ${
           clicked
@@ -73,7 +73,7 @@ export default function Cursor() {
         }
         ${
           linkHovered
-            ? '-translate-y-1/2 -translate-x-1/2 scale-150 transform bg-dark transition-transform duration-300 ease-linear dark:border-white dark:border-opacity-100 dark:bg-opacity-0'
+            ? '-translate-y-1/2 -translate-x-1/2 scale-150 transform bg-dark transition-transform duration-300 ease-linear dark:border-white dark:border-opacity-100 dark:bg-light'
             : 'scale-100'
         }
       `}
