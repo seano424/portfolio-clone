@@ -48,9 +48,14 @@ export default function Projects() {
                   </a>
                 </Link>
               </div>
-              <ul className="flex flex-wrap justify-center gap-4 lg:justify-start">
+              <ul className="flex flex-wrap justify-center gap-2 divide-x-2 divide-secondary/20 lg:justify-start">
                 {project.tech.map((tech, i) => (
-                  <li key={i}>{tech}</li>
+                  <li
+                    className=" pl-1 font-semibold italic tracking-tighter text-secondary dark:text-cyan-300"
+                    key={i}
+                  >
+                    {tech}
+                  </li>
                 ))}
               </ul>
             </div>
