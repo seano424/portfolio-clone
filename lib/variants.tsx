@@ -17,7 +17,7 @@ export const themeVariants = {
     opacity: 1,
     scale: 1.3,
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       ease: [0.83, 0, 0.17, 1],
     },
   },
@@ -25,7 +25,7 @@ export const themeVariants = {
     opacity: 0,
     scale: 0.8,
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       ease: [0.83, 0, 0.17, 1],
     },
   },

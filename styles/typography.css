@@ -15,5 +15,5 @@
 }
 
 .a {
-  @apply rounded-full px-5 py-4 text-lg font-black text-neutral-800 transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-dark dark:hover:text-gray-100;
+  @apply rounded-full px-5 py-4 text-lg font-black text-neutral-800 transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-neutral-900/50 dark:hover:text-gray-100;
 }
