@@ -21,29 +21,36 @@ const ThemeButton = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
+  const themeVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.83, 0, 0.17, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.83, 0, 0.17, 1],
+      },
+    },
+  }
+
   return (
     <button aria-label="Button to change color theme" onClick={handleTheme}>
       <AnimatePresence exitBeforeEnter initial={false}>
         <div className="flex ">
           <m.div
             key={`theme-${theme}`}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              transition: {
-                duration: 0.5,
-                ease: [0.83, 0, 0.17, 1],
-              },
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0,
-              transition: {
-                duration: 0.5,
-                ease: [0.83, 0, 0.17, 1],
-              },
-            }}
+            variants={themeVariants}
+            initial="hidden"
+            animate="show"
+            exit="exit"
           >
             {icon}
           </m.div>

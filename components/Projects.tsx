@@ -8,12 +8,15 @@ export default function Projects() {
   return (
     <Element name="projects">
       <section className="px-base py-base bg-gray-100 dark:bg-gray-900">
+        {/* Heading */}
         <h2 className="h2 mb-4 text-center sm:mb-16">
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Recent{' '}
           </span>
           Projects
         </h2>
+
+        {/* Projects Cards */}
         {projects.map((project, i) => (
           <article
             key={i}

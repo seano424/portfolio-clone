@@ -10,7 +10,8 @@ export default function Menu() {
     scrollTo(url, 900, -80)
     setShowMobileNav((prev) => !prev)
   }
-  const mobileMenu = {
+
+  const mobileMenuVariants = {
     hidden: { opacity: 0, x: -200 },
     show: { opacity: 1, x: 0 },
     exit: {
@@ -28,7 +29,7 @@ export default function Menu() {
       {showMobileNav && (
         <m.div
           key="mobileMenu"
-          variants={mobileMenu}
+          variants={mobileMenuVariants}
           initial="hidden"
           animate="show"
           exit="exit"
