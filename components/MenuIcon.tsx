@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes'
 import { Squash } from 'hamburger-react'
 import useShowMobileNav from 'hooks/useShowMobileNav'
 
-const Hamburger = () => {
+const MenuIcon = () => {
   const { theme } = useTheme()
   const [color, setColor] = useState('white')
   const [showMobileNav, setShowMobileNav] = useShowMobileNav()
@@ -26,4 +26,4 @@ const Hamburger = () => {
   )
 }
 
-export default Hamburger
+export default MenuIcon
