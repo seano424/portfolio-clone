@@ -10,6 +10,6 @@
   }
 
   .mobile-link {
-    @apply text-left text-5xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:text-white dark:hover:text-light sm:text-6xl md:text-7xl;
+    @apply text-left text-5xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:text-white dark:hover:text-cyan-300 sm:text-6xl md:text-7xl;
   }
 }
