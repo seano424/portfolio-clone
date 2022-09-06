@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'
+import { themeVariants } from 'lib/variants'
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
@@ -19,26 +20,6 @@ const ThemeButton = () => {
 
   const handleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
-  }
-
-  const themeVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.83, 0, 0.17, 1],
-      },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.83, 0, 0.17, 1],
-      },
-    },
   }
 
   return (

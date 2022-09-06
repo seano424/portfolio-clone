@@ -3,25 +3,13 @@ import { AnimatePresence, m } from 'framer-motion'
 import useShowMobileNav from 'hooks/useShowMobileNav'
 import { mobileNavLinks } from 'lib/links'
 import scrollTo from 'lib/scrollTo'
+import { mobileMenuVariants } from 'lib/variants'
 
 export default function Menu() {
   const [showMobileNav, setShowMobileNav] = useShowMobileNav()
   const handleNavigation = async (url) => {
     scrollTo(url, 900, -80)
     setShowMobileNav((prev) => !prev)
-  }
-
-  const mobileMenuVariants = {
-    hidden: { opacity: 0, x: -200 },
-    show: { opacity: 1, x: 0 },
-    exit: {
-      opacity: 0,
-      x: -600,
-      transition: {
-        duration: 0.6,
-        ease: [0.83, 0, 0.17, 1],
-      },
-    },
   }
 
   return (
