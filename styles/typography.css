@@ -3,11 +3,11 @@
   font-family: 'Open Sans', Open-sans-fallback, sans-serif;
 }
 .h2 {
-  @apply text-5xl font-extrabold uppercase tracking-tighter md:text-7xl;
+  @apply text-5xl font-extrabold uppercase tracking-tighter sm:text-7xl;
 }
 
 .h3 {
-  @apply text-4xl font-extrabold tracking-tighter;
+  @apply text-2xl font-extrabold tracking-tighter sm:text-4xl;
 }
 .p {
   @apply sm:text-lg;
