@@ -31,13 +31,13 @@ export default function AboutMe() {
             programming languages, as well as dabbling in photography. You can
             find me on{' '}
             <Link href="/">
-              <a className="text-blue-700 transition-all duration-300 hover:underline">
+              <a className="text-blue-700 transition-all duration-300 hover:underline dark:text-cyan-300 ">
                 Twitter
               </a>
             </Link>{' '}
             or{' '}
             <Link href="/">
-              <a className="text-emerald-700 transition-all duration-300 hover:underline">
+              <a className="text-emerald-700 transition-all duration-300 hover:underline dark:text-emerald-200">
                 GitHub!
               </a>
             </Link>
