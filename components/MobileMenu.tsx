@@ -34,11 +34,10 @@ export default function Menu() {
               <button
                 key={link.title}
                 aria-label={`Scroll Button To Section ${link.title}`}
-                className={`p-1 text-left  text-6xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light md:text-7xl
+                className={`p-1 text-left text-5xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:text-white dark:hover:text-light sm:text-6xl md:text-7xl
                 ${i === 0 && 'duration-200'}
                 ${i === 1 && 'duration-300'}
                 ${i === 2 && 'duration-500'}
-                ${i === 3 && 'duration-700'}
               `}
                 onClick={() => handleNavigation(link.url)}
               >
@@ -50,7 +49,7 @@ export default function Menu() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <a className="text-6xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all ease-linear hover:text-secondary dark:hover:text-light md:text-7xl">
+              <a className="text-5xl font-black uppercase tracking-tighter text-fuchsia-400 drop-shadow-2xl transition-all duration-700 ease-linear hover:text-secondary dark:text-white dark:hover:text-light sm:text-6xl md:text-7xl">
                 Contact
               </a>
             </Link>
