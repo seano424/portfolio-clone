@@ -28,7 +28,20 @@ export default function Layout({ children }) {
     <div className="flex min-h-screen flex-col bg-light font-open dark:bg-dark dark:text-blue-50">
       <Head>
         <title>Sean OReilly's Portfolio</title>
-        <meta name="description" content="Sean OReilly's Portfolio" />
+        <meta
+          name="description"
+          content="Sean OReilly's Web Development Portfolio"
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Sean OReilly's Web Development Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Sean OReilly's Web Development Portfolio"
+        />
+        <meta property="og:image" content="/images/portfolio-1.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Header />
