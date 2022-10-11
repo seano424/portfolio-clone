@@ -10,8 +10,8 @@ const Avatar = () => {
     >
       <Image
         className="rounded-full object-cover"
-        src="/images/mebw.webp"
-        alt="Image of Sean"
+        src="/images/wave.jpg"
+        alt="Photo by Matt Paul Catalano on Unsplash"
         layout="fill"
         sizes="20vw"
         priority

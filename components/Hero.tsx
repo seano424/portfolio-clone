@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="relative z-10 h-64 w-64 rounded-full shadow-2xl md:h-80 md:w-80">
           <Image
             className="rounded-full object-cover"
-            src="/images/mebw.webp"
+            src="/images/me.jpg"
             alt="Hero Image"
             layout="fill"
             sizes="(min-width: 75em) 20vw,
