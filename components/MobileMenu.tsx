@@ -21,7 +21,7 @@ export default function Menu() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="px-base py-base fixed top-20 z-20  flex min-h-screen w-10/12 flex-col gap-8 bg-light/90 shadow-2xl filter backdrop-blur-sm dark:bg-dark/90 md:w-2/3 lg:hidden"
+          className="px-base py-base fixed top-20 z-20  flex min-h-screen w-full flex-col gap-8 bg-light/90 shadow-2xl filter backdrop-blur-sm dark:bg-dark/90 md:w-2/3 lg:hidden"
         >
           {mobileNavLinks.map((link, i) => (
             <button

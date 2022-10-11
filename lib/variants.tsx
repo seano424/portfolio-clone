@@ -1,12 +1,17 @@
 export const mobileMenuVariants = {
-  hidden: { opacity: 0, x: -200 },
-  show: { opacity: 1, x: 0 },
+  hidden: { x: -600 },
+  show: {
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: 'linear',
+    },
+  },
   exit: {
-    opacity: 0,
     x: -600,
     transition: {
-      duration: 0.6,
-      ease: [0.83, 0, 0.17, 1],
+      duration: 0.4,
+      ease: 'linear',
     },
   },
 }
