@@ -12,7 +12,7 @@ export default function Hero() {
     <Element name="home">
       <section className="px-base relative flex flex-col items-center justify-center overflow-hidden pt-20 pb-20 text-center sm:pt-32 xl:pt-28">
         <div className="tranform absolute -top-full bottom-0 -left-[123%] right-0 z-0 hidden -rotate-[20deg] bg-secondary/5 dark:hidden lg:block"></div>
-        <div className="relative z-10 h-64 w-64 rounded-full shadow-2xl md:h-80 md:w-80">
+        <div className="relative z-10 h-64 w-64 rounded-full border-8 border-white/20 shadow-2xl md:h-80 md:w-80">
           <Image
             className="rounded-full object-cover"
             src="/images/me.jpg"
